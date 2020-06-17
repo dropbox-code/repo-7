@@ -1,0 +1,36 @@
+{
+  "name": "@skyscanner/stylelint-plugin-backpack",
+  "version": "0.0.1",
+  "description": "Stylelint configuration for Backpack development",
+  "keywords": [
+    "stylelint",
+    "stylelintplugin",
+    "stylelint-plugin",
+    "scss",
+    "skyscanner"
+  ],
+  "author": "Backpack Design System <backpack@skyscanner.net>",
+  "main": "index.js",
+  "engines": {
+    "node": "^12.13.0",
+    "npm": "^6.12.0"
+  },
+  "scripts": {
+    "pretest": "npx ensure-node-env",
+    "test": "echo \"No tests yet\""
+  },
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "eslint-config-skyscanner": "^6.0.0",
+    "husky": "^4.2.5",
+    "jest": "^26.0.1",
+    "stylelint": "^13.3.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com/Skyscanner/stylelint-plugin-backpack.git"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
