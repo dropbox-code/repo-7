@@ -17,7 +17,7 @@
   },
   "scripts": {
     "pretest": "npx ensure-node-env",
-    "test": "jest",
+    "test": "npm run lint && jest",
     "lint": "npm run lint:js",
     "lint:js": "eslint . --ext js",
     "lint:js:fix": "eslint . --ext js --fix",
