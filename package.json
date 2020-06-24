@@ -17,14 +17,23 @@
   },
   "scripts": {
     "pretest": "npx ensure-node-env",
-    "test": "echo \"No tests yet\""
+    "test": "jest"
   },
   "license": "Apache-2.0",
+  "dependencies": {
+    "bpk-tokens": "^32.0.5",
+    "lodash": "^4.17.15",
+    "postcss-values-parser": "^3.2.1",
+    "stylelint": "^13.6.1",
+    "tinycolor2": "^1.4.1"
+  },
   "devDependencies": {
     "eslint-config-skyscanner": "^6.0.0",
     "husky": "^4.2.5",
-    "jest": "^26.0.1",
-    "stylelint": "^13.3.3"
+    "jest": "^26.0.1"
+  },
+  "peerDependencies": {
+    "stylelint": "^13.0.0"
   },
   "repository": {
     "type": "git",
