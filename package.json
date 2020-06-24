@@ -17,7 +17,11 @@
   },
   "scripts": {
     "pretest": "npx ensure-node-env",
-    "test": "jest"
+    "test": "jest",
+    "lint": "npm run lint:js",
+    "lint:js": "eslint . --ext js",
+    "lint:js:fix": "eslint . --ext js --fix",
+    "prettier": "prettier --config .prettierrc --write \"**/*.{js,jsx}\""
   },
   "license": "Apache-2.0",
   "dependencies": {
@@ -30,7 +34,8 @@
   "devDependencies": {
     "eslint-config-skyscanner": "^6.0.0",
     "husky": "^4.2.5",
-    "jest": "^26.0.1"
+    "jest": "^26.0.1",
+    "lint-staged": "^10.2.11"
   },
   "peerDependencies": {
     "stylelint": "^13.0.0"
@@ -41,5 +46,18 @@
   },
   "publishConfig": {
     "access": "public"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "!(LICENSE)*.md": [
+      "prettier --write"
+    ],
+    "**/!(package|package-lock).json": "prettier --write",
+    "**/*.js": "npm run lint:js:fix",
+    "**/*.yml": "prettier --write"
   }
 }
