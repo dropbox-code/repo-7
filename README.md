@@ -21,7 +21,7 @@ Add `@skyscanner/stylelint-plugin-backpack` to your stylelint config plugins arr
 }
 ```
 
-Then add rules you need to the rules list. All rules from `@skyscanner/stylelint-plugin-backpack` need to be namespaced with `backpack`.
+Once you have added the plugin, you will need to add the rules you wish to use to your `rules` config. All rules from `@skyscanner/stylelint-plugin-backpack` need to be namespaced with `backpack`.
 
 Like so:
 
