@@ -4,3 +4,34 @@
 [![npm version](https://img.shields.io/npm/v/@skyscanner/stylelint-plugin-backpack.svg)](https://www.npmjs.com/package/@skyscanner/stylelint-plugin-backpack)
 
 Stylelint plugin to prevent magic arbitrary values and promote the use of Backpack tokens.
+
+## Installation
+
+```
+npm install @skyscanner/stylelint-plugin-backpack --save-dev
+```
+
+## Usage
+
+Add `stylelint-plugin-backpack` to your stylelint config plugins array, 
+
+```
+{
+  "plugins": ["stylelint-plugin-backpack"]
+}
+```
+
+Then add rules you need to the rules list. All rules from `stylelint-plugin-backpack` need to be namespaced with `backpack`.
+
+Like so:
+
+```js
+// .stylelintrc
+{
+  "plugins": ["stylelint-plugin-backpack"],
+  "rules": {
+    "backpack/use-colors": true,
+    "backpack/use-tokens": true
+  }
+}
+```
