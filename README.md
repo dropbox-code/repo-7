@@ -13,22 +13,21 @@ npm install @skyscanner/stylelint-plugin-backpack --save-dev
 
 ## Usage
 
-Add `stylelint-plugin-backpack` to your stylelint config plugins array, 
+Add `@skyscanner/stylelint-plugin-backpack` to your stylelint config plugins array, 
 
 ```
 {
-  "plugins": ["stylelint-plugin-backpack"]
+  "plugins": ["@skyscanner/stylelint-plugin-backpack"]
 }
 ```
 
-Then add rules you need to the rules list. All rules from `stylelint-plugin-backpack` need to be namespaced with `backpack`.
+Then add rules you need to the rules list. All rules from `@skyscanner/stylelint-plugin-backpack` need to be namespaced with `backpack`.
 
 Like so:
 
 ```js
 // .stylelintrc
 {
-  "plugins": ["stylelint-plugin-backpack"],
   "rules": {
     "backpack/use-colors": true,
     "backpack/use-tokens": true
