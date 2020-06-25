@@ -2,6 +2,10 @@
 
 > Place your changes below this line.
 
+## 1.0.0 - Added token linting rules
+- Added linting rules for testing colour tokens in use.
+- Added linting rules for testing spacing, radii and border tokens when not in binary expressions.
+
 ## How to write a good changelog entry
 
 1. Add 'Breaking', 'Added' or 'Fixed' in bold depending on if the change will be major, minor or patch according to [semver](semver.org).
