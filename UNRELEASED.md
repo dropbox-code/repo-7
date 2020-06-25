@@ -4,7 +4,7 @@
 
 ## 1.0.0 - Added token linting rules
 - Added linting rules for testing colour tokens in use.
-- Added linting rules for testing Spacing, Radii and Border tokens when not in binary expressions.
+- Added linting rules for testing spacing, radii and border tokens when not in binary expressions.
 
 ## How to write a good changelog entry
 
