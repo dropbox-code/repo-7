@@ -2,6 +2,12 @@
 
 > Place your changes below this line.
 
+# 1.1.0 - Updated linting rules
+ADDED:
+  `use-tokens`
+    - Added an exception for values that don't have Bpk values such as `auto` and `0`
+    - Added an exception when using the `%` unit as these don't have Bpk replacements
+
 FIXED:
   `use-colors`:
     - Added checking against full list of possible colors - such as badge colors or banner alert colors
@@ -9,10 +15,6 @@ FIXED:
   `use-tokens`:
     - Changed token props to use correct css selectors as they previously were using React Native selectors.
 
-ADDED:
-  `use-tokens`
-    - Added an exception for values that don't have Bpk values such as `auto` and `0`
-    - Added an exception when using the `%` unit as these don't have Bpk replacements
 
 
 ## How to write a good changelog entry
