@@ -2,6 +2,11 @@
 
 > Place your changes below this line.
 
+# 1.2.0 - Added support for shorthand rules
+ADDED:
+  `use-tokens`
+    - This rule now supports shorthand CSS props `margin`, `padding`, `border-radius` and `border-width` for linting.
+
 # 1.1.0 - Updated linting rules
 ADDED:
   `use-tokens`
