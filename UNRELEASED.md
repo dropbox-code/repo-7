@@ -2,6 +2,10 @@
 
 > Place your changes below this line.
 
+**Fixed:**
+
+- `use-tokens`
+  - Fixed issue where multiplications of tokens threw errors instead of passing.
 
 ## How to write a good changelog entry
 
