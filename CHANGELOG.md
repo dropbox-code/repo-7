@@ -5,14 +5,14 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
-# 1.1.1 - Fix linting rules for token multiples
+## 1.1.1 - Fix linting rules for token multiples
 
 **Fixed:**
 
 - `use-tokens`
   - Fixed issue where multiplications of tokens threw errors instead of passing.
 
-# 1.1.0 - Updated linting rules
+## 1.1.0 - Updated linting rules
 
 ADDED:
 `use-tokens` - Added an exception for values that don't have Bpk values such as `auto` and `0` - Added an exception when using the `%` unit as these don't have Bpk replacements - This rule now supports shorthand CSS props `margin`, `padding`, `border-radius` and `border-width` for linting.
