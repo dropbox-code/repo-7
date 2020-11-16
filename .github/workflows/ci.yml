@@ -2,9 +2,13 @@ name: CI
 
 on:
   push:
-    branches: [ master ]
+    branches: [master]
   pull_request:
-    branches: [ master ]
+    branches: [master]
+
+defaults:
+  run:
+    shell: bash -l {0}
 
 jobs:
   build:
@@ -12,8 +16,13 @@ jobs:
     steps:
       - uses: actions/checkout@v1
 
+      - name: nvm install
+        run: nvm install
+
       - name: Install
         run: npm ci
 
       - name: Test
-        run: npm test
+        run: |
+          nvm use 
+          npm test
