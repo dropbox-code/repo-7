@@ -5,6 +5,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## 1.1.2 - Fix issue with disabling rules
+
+**Fixed:**
+`use-colors`
+`use-tokens` - Fixed an issue where the rule couldn't be disabled and was not validating the rule as expected.
+
 ## 1.1.1 - Fix linting rules for token multiples
 
 **Fixed:**
