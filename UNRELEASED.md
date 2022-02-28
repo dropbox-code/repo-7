@@ -2,6 +2,10 @@
 
 > Place your changes below this line.
 
+**Added:**
+
+Created `use-typography-styles` rule that is fired whenever `font-size`, `line-height`, `font-weight` or `letter-spacing` are declared, or when the `font` shorthand is used. This enforces the use of backpack typography mixins which ensure consistent typography across all of Skyscanner.
+
 **Changed:**
 
 Spring clean updates:
