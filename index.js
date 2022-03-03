@@ -17,4 +17,5 @@
 module.exports = [
   require('./lib/rules/use-colors'),
   require('./lib/rules/use-tokens'),
+  require('./lib/rules/use-typography-styles'),
 ];
