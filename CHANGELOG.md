@@ -5,6 +5,20 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## 1.2.0 - Create a rule to send warnings when typography props are used
+
+**Added:**
+
+Created `use-typography-styles` rule that is fired whenever `font-size`, `line-height`, `font-weight` or `letter-spacing` are declared, or when the `font` shorthand is used. This enforces the use of backpack typography mixins which ensure consistent typography across all of Skyscanner.
+
+**Changed:**
+
+Spring clean updates:
+  - Migrated to Backpack Foundations.
+  - Upgraded lodash to latest
+  - Updated postcss-values-parser to latest
+  - Updated tinycolor2 to latest
+
 ## 1.1.3 - Fix secondary issue with disabling rules
 
 **Fixed:**
