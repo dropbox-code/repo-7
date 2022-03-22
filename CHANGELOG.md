@@ -5,6 +5,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## 1.2.1 - Fix dependencies
+
+**Fixed:**
+
+- Moved `stylelint` dependency to `devDeps` instead of `dependencies` as this requirement is fulfiled by the `stylelint-config-skyscanner` when installed and prevents npm installing two different versions and causing conflicts in running.
+
 ## 1.2.0 - Create a rule to send warnings when typography props are used
 
 **Added:**
