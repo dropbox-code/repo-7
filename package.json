@@ -29,14 +29,14 @@
     "@skyscanner/bpk-foundations-web": "^4.0.0",
     "lodash": "^4.17.21",
     "postcss-values-parser": "^6.0.0",
-    "stylelint": "^13.6.1",
     "tinycolor2": "^1.4.2"
   },
   "devDependencies": {
     "eslint-config-skyscanner": "^9.0.1",
     "husky": "^7.0.2",
     "jest": "^26.0.1",
-    "lint-staged": "^11.1.2"
+    "lint-staged": "^11.1.2",
+    "stylelint": "^13.6.1"
   },
   "peerDependencies": {
     "stylelint": "^13.0.0"
