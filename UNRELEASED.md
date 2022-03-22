@@ -2,6 +2,10 @@
 
 > Place your changes below this line.
 
+## Breaking
+- Migrated from Node 12 to Node 16 as minimum supported version.
+- Updated `@skyscanner/eslint-config-skyscanner` to latest version.
+
 ## How to write a good changelog entry
 
 1. Add 'Breaking', 'Added' or 'Fixed' in bold depending on if the change will be major, minor or patch according to [semver](semver.org).
