@@ -5,6 +5,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## 1.3.0 - Update dependencies
+
+**Changed:**
+
+- Updated `stylelint` peer version to new v14 to align with `stylelint-config-skyscanner`.
+
 ## 1.2.1 - Fix dependencies
 
 **Fixed:**
