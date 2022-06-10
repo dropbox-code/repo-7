@@ -404,6 +404,7 @@ setup(
         "dispatch.plugins": [
             "dispatch_basic_auth = dispatch.plugins.dispatch_core.plugin:BasicAuthProviderPlugin",
             "dispatch_contact = dispatch.plugins.dispatch_core.plugin:DispatchContactPlugin",
+            "dispatch_confluence = dispatch.plugins.dispatch_confluence.plugin:ConfluencePlugin",
             "dispatch_document_resolver = dispatch.plugins.dispatch_core.plugin:DispatchDocumentResolverPlugin",
             "dispatch_participant_resolver = dispatch.plugins.dispatch_core.plugin:DispatchParticipantResolverPlugin",
             "dispatch_pkce_auth = dispatch.plugins.dispatch_core.plugin:PKCEAuthProviderPlugin",
