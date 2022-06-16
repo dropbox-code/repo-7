@@ -1,4 +1,4 @@
-import dispatch_confluence
+#import dispatch_confluence
 from dispatch.plugins.base.conversation import ConversationPlugin
 #from dispatch.plugins.dispatch_confluence import drive as google_drive_plugin
 
