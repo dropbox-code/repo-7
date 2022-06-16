@@ -1,9 +1,9 @@
 #import dispatch_confluence
-from dispatch.plugins.base.conversation import ConversationPlugin
+from dispatch.plugins.bases import StoragePlugin
 #from dispatch.plugins.dispatch_confluence import drive as google_drive_plugin
 
 
-class ConfluencePlugin(ConversationPlugin):
+class ConfluencePlugin(StoragePlugin):
     title = 'Confluence'
     slug = 'confluence'
     description = 'Plugin generating confluence post-mortem page.'
