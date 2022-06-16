@@ -1,8 +1,5 @@
 from dispatch.plugins.bases import DocumentPlugin
-import dispatch.plugins.dispatch_dispacth as confluence_plugin
-
-
-__version__ = "0.1.0"
+import dispatch.plugins.dispatch_dispaitch as confluence_plugin
 
 
 #@apply(timer, exclude=["__init__"])
