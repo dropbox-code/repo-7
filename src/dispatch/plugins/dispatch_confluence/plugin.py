@@ -1,10 +1,9 @@
 from dispatch.plugins.bases import StoragePlugin
 
-
 class ConfluencePlugin(StoragePlugin):
-    title = 'Confluence'
-    slug = 'confluence'
-    description = 'Plugin generating confluence post-mortem page.'
+    title = 'Confluence Plugin - Document Management'
+    slug = 'confluence-doc'
+    description = 'Uses Confluence to help manage external documentation.'
     version = "0.0.1"
     author = 'Ant0wan'
     author_url = "https://github.com/contentsquare/dispatch.git"
