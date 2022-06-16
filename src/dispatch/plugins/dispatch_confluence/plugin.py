@@ -7,12 +7,9 @@ class ConfluencePlugin(StoragePlugin):
     title = 'Confluence'
     slug = 'confluence'
     description = 'Plugin generating confluence post-mortem page.'
-    version = dispatch_pluginname.VERSION
-    version = google_drive_plugin.__version__
-
+    version = "0.0.1"
     author = 'Ant0wan'
-    #author_url = 'https://github.com/ContentSquare/platform_houston/dispatch_plugin'
-    author_url = "https://github.com/netflix/dispatch.git"
+    author_url = "https://github.com/contentsquare/dispatch.git"
 
     def create(self, items, **kwargs):
         return "Conversation Created"
