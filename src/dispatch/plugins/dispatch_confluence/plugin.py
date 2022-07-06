@@ -1,4 +1,5 @@
 from dispatch.plugins.bases import DocumentPlugin
+import dispatch.plugins.dispatch_confluence as confluence_plugin
 
 #@apply(timer, exclude=["__init__"])
 #@apply(counter, exclude=["__init__"])
