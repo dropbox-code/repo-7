@@ -51,37 +51,37 @@ for (let i = 0; i < simpleOne.length; i++) {
 
 // 5. As 4, update array 'deepTwo' so that the result is:
 //       [[[1]],[[1],[1,2]],...]
-// for (let i = 0; i < simpleOne.length; i++) {
-//   const newArr = []
-//   for (let j = 0; j <= i; i++) {
-//     const newArr1 = []
-//     for (let k = 0; k <= j; k++) {
-//       newArr1.push(simpleOne[k])
-//     }
-//     newArr.push(newArr1)
-//   }
-//   deepTwo.push(newArr)
-// }
+for (let i = 0; i < simpleOne.length; i++) {
+  const newArr = []
+  for (let j = 0; j <= i; j++) {
+    const newArr1 = []
+    for (let k = 0; k <= j; k++) {
+      newArr1.push(simpleOne[k])
+    }
+    newArr.push(newArr1)
+  }
+  deepTwo.push(newArr)
+}
 
 // 6. As 5, update the array 'deepThree', but the result should be the average of the sum of the squares of the numbers in each array
 //       [[1],[[1],[2.5]],...]
 
-// let avg
+let avg
 
-// for (let i = 0; i < simpleOne.length; i++) {
-//   const newArr = []
-//   for (let j = 0; j <= i; i++) {
-//     const newArr1 = []
-//     let sum = 0
-//     for (let k = 0; k <= j; k++) {
-//       sum += simpleOne[k]
-//       avg = sum / simpleOne[i]
-//       newArr1.push(avg)
-//     }
-//     newArr.push(newArr1)
-//   }
-//   deepThree.push(newArr)
-// }
+for (let i = 0; i < simpleOne.length; i++) {
+  const newArr = []
+  for (let j = 0; j <= i; j++) {
+    const newArr1 = []
+    let sum = 0
+    for (let k = 0; k <= j; k++) {
+      sum += simpleOne[k]
+      avg = sum / simpleOne[i]
+      newArr1.push(avg)
+    }
+    newArr.push(newArr1)
+  }
+  deepThree.push(newArr)
+}
 
 module.exports = {
   START,
