@@ -67,17 +67,18 @@ for (let i = 0; i < simpleOne.length; i++) {
 //       [[1],[[1],[2.5]],...]
 
 let avg
-
 for (let i = 0; i < simpleOne.length; i++) {
   const newArr = []
   for (let j = 0; j <= i; j++) {
     const newArr1 = []
     let sum = 0
     for (let k = 0; k <= j; k++) {
-      sum += simpleOne[k]
-      avg = sum / simpleOne[i]
-      newArr1.push(avg)
+      for (let l = 0; l <= k; l++) {
+        sum += simpleOne[k]
+      }
+      avg = sum / (j + 1)
     }
+    newArr1.push(avg)
     newArr.push(newArr1)
   }
   deepThree.push(newArr)
