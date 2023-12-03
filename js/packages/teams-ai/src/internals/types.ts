@@ -81,6 +81,7 @@ export interface CreateCompletionResponseUsage {
  * @private
  */
 export interface CreateChatCompletionRequest {
+    dataSources?: Array<ChatCompletionRequestDataSource>;
     messages: Array<ChatCompletionRequestMessage>;
     functions?: Array<ChatCompletionAction>;
     function_call?: CreateChatCompletionRequestFunctionCall;
@@ -96,6 +97,70 @@ export interface CreateChatCompletionRequest {
     user?: string;
 }
 
+/**
+ * @private
+ */
+export interface ChatCompletionRequestDataSource {
+    type: 'AzureCognitiveSearch' | 'AzureCosmosDB';
+    parameters: ChatCompletionRequestDataSourceParameters;
+}
+
+/**
+ * @private
+ */
+type ChatCompletionRequestDataSourceParameters = AzureAIDataSourceSearchParameters | AzureCosmoDBDataSourceParameters;
+
+/**
+ * @private
+ */
+export interface ChatCompletionRequestDataSourceBaseParameters {
+    indexName: string;
+    inScope?: boolean | null;
+    topNDocuments?: number | null;
+    semanticConfiguration?: string | null;
+    roleInformation?: string | null;
+    filter?: string | null;
+    embeddingEndpoint?: string | null;
+    embeddingKey?: string | null;
+    embeddingDeploymentName?: string | null;
+    strictness?: number | null;
+    fieldsMapping?: { [key: string]: string } | null;
+}
+
+/**
+ * @private
+ */
+export interface AzureAIDataSourceSearchParameters extends ChatCompletionRequestDataSourceBaseParameters {
+    endpoint: string;
+    key: string;
+    queryType?: 'simple' | 'semantic' | 'vector' | 'vectorSimpleHybrid' | 'vectorSemanticHybrid';
+}
+
+/**
+ * @private
+ */
+export interface AzureCosmoDBDataSourceParameters extends ChatCompletionRequestDataSourceBaseParameters {
+    authentication: AzureCosmoDBDataSourceParametersAuthentication;
+    databaseName: string;
+    containerName: string;
+    embeddingDependency: AzureCosmoDBDataSourceParametersEmbeddingDependency;
+}
+
+/**
+ * @private
+ */
+export interface AzureCosmoDBDataSourceParametersAuthentication {
+    type: string;
+    connectionString: string;
+}
+
+/**
+ * @private
+ */
+export interface AzureCosmoDBDataSourceParametersEmbeddingDependency {
+    type: string;
+    deploymentName: string;
+}
 
 /**
  * @private

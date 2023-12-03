@@ -9,7 +9,7 @@
 import axios, { AxiosInstance, AxiosResponse, AxiosRequestConfig } from 'axios';
 import { PromptFunctions, PromptTemplate } from "../prompts";
 import { PromptCompletionModel, PromptResponse } from "./PromptCompletionModel";
-import { ChatCompletionRequestMessage, CreateChatCompletionRequest, CreateChatCompletionResponse, CreateCompletionRequest, CreateCompletionResponse, OpenAICreateChatCompletionRequest, OpenAICreateCompletionRequest } from "../internals";
+import { ChatCompletionRequestDataSource, ChatCompletionRequestMessage, CreateChatCompletionRequest, CreateChatCompletionResponse, CreateCompletionRequest, CreateCompletionResponse, OpenAICreateChatCompletionRequest, OpenAICreateCompletionRequest } from "../internals";
 import { Tokenizer } from "../tokenizers";
 import { Colorize } from "../internals";
 import { TurnContext } from 'botbuilder';
@@ -106,6 +106,11 @@ export interface AzureOpenAIModelOptions extends BaseOpenAIModelOptions {
      * Optional. Version of the API being called. Defaults to `2023-05-15`.
      */
     azureApiVersion?: string;
+
+    /**
+     * Optiona. Add extenstions with dataSource options
+     */
+    dataSources?: Array<ChatCompletionRequestDataSource>;
 }
 
 /**
@@ -123,6 +128,11 @@ export class OpenAIModel implements PromptCompletionModel {
     public readonly options: OpenAIModelOptions|AzureOpenAIModelOptions;
 
     /**
+     * DataSource options the client was configured with.
+     */
+    public readonly dataSources?: Array<ChatCompletionRequestDataSource>;
+
+    /**
      * Creates a new `OpenAIModel` instance.
      * @param options Options for configuring the model client.
      */
@@ -137,6 +147,13 @@ export class OpenAIModel implements PromptCompletionModel {
                 useSystemMessages: false
             }, options) as AzureOpenAIModelOptions;
 
+            if ((options as AzureOpenAIModelOptions).dataSources) {
+                this.dataSources = (options as AzureOpenAIModelOptions).dataSources?.map(ds => ({
+                    type: ds.type,
+                    parameters: ds.parameters
+                }));
+            }
+            
             // Cleanup and validate endpoint
             let endpoint = this.options.azureEndpoint.trim();
             if (endpoint.endsWith('/')) {
@@ -228,6 +245,7 @@ export class OpenAIModel implements PromptCompletionModel {
             // Call chat completion API
             const request: CreateChatCompletionRequest = this.copyOptionsToRequest<CreateChatCompletionRequest>({
                 messages: result.output as ChatCompletionRequestMessage[],
+                dataSources: this.dataSources
             }, this.options, ['max_tokens', 'temperature', 'top_p', 'n', 'stream', 'logprobs', 'echo', 'stop', 'presence_penalty', 'frequency_penalty', 'best_of', 'logit_bias', 'user', 'functions', 'function_call']);
             const response = await this.createChatCompletion(request);
             if (this.options.logRequests) {
