@@ -1,3 +1,7 @@
+/* 
+  NOTICE: this dir is copied from parsers/java-junit, No any other changes except class name
+  We should copy test file too when we develop perl parser based on it.
+*/
 import * as path from 'path'
 import {ParseOptions, TestParser} from '../../test-parser'
 import {parseStringPromise} from 'xml2js'
