@@ -265,6 +265,7 @@ const dotnet_trx_parser_1 = __nccwpck_require__(2664);
 const java_junit_parser_1 = __nccwpck_require__(676);
 const jest_junit_parser_1 = __nccwpck_require__(1113);
 const mocha_json_parser_1 = __nccwpck_require__(6043);
+const perl_junit_parser_1 = __nccwpck_require__(9700);
 const path_utils_1 = __nccwpck_require__(4070);
 const github_utils_1 = __nccwpck_require__(3522);
 const markdown_utils_1 = __nccwpck_require__(6482);
@@ -431,6 +432,8 @@ class TestReporter {
                 return new jest_junit_parser_1.JestJunitParser(options);
             case 'mocha-json':
                 return new mocha_json_parser_1.MochaJsonParser(options);
+            case 'perl-junit':
+                return new perl_junit_parser_1.PerlJunitParser(options);
             default:
                 throw new Error(`Input variable 'reporter' is set to invalid value '${reporter}'`);
         }
@@ -1393,6 +1396,276 @@ class MochaJsonParser {
     }
 }
 exports.MochaJsonParser = MochaJsonParser;
+
+
+/***/ }),
+
+/***/ 5424:
+/***/ ((__unused_webpack_module, exports) => {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.parseStackTraceElement = void 0;
+// classloader and module name are optional:
+// at <CLASSLOADER>/<MODULE_NAME_AND_VERSION>/<FULLY_QUALIFIED_METHOD_NAME>(<FILE_NAME>:<LINE_NUMBER>)
+// https://github.com/eclipse-openj9/openj9/issues/11452#issuecomment-754946992
+const re = /^\s*at (\S+\/\S*\/)?(.*)\((.*):(\d+)\)$/;
+function parseStackTraceElement(stackTraceLine) {
+    const match = stackTraceLine.match(re);
+    if (match !== null) {
+        const [_, maybeClassLoaderAndModuleNameAndVersion, tracePath, fileName, lineStr] = match;
+        const { classLoader, moduleNameAndVersion } = parseClassLoaderAndModule(maybeClassLoaderAndModuleNameAndVersion);
+        return {
+            classLoader,
+            moduleNameAndVersion,
+            tracePath,
+            fileName,
+            lineStr
+        };
+    }
+    return undefined;
+}
+exports.parseStackTraceElement = parseStackTraceElement;
+function parseClassLoaderAndModule(maybeClassLoaderAndModuleNameAndVersion) {
+    if (maybeClassLoaderAndModuleNameAndVersion) {
+        const res = maybeClassLoaderAndModuleNameAndVersion.split('/');
+        const classLoader = res[0];
+        let moduleNameAndVersion = res[1];
+        if (moduleNameAndVersion === '') {
+            moduleNameAndVersion = undefined;
+        }
+        return { classLoader, moduleNameAndVersion };
+    }
+    return { classLoader: undefined, moduleNameAndVersion: undefined };
+}
+
+
+/***/ }),
+
+/***/ 9700:
+/***/ (function(__unused_webpack_module, exports, __nccwpck_require__) {
+
+"use strict";
+
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
+var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
+    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.PerlJunitParser = void 0;
+const path = __importStar(__nccwpck_require__(1017));
+const xml2js_1 = __nccwpck_require__(6189);
+const java_stack_trace_element_parser_1 = __nccwpck_require__(5424);
+const path_utils_1 = __nccwpck_require__(4070);
+const test_results_1 = __nccwpck_require__(2768);
+class PerlJunitParser {
+    constructor(options) {
+        var _a;
+        this.options = options;
+        // Map to efficient lookup of all paths with given file name
+        this.trackedFiles = {};
+        for (const filePath of options.trackedFiles) {
+            const fileName = path.basename(filePath);
+            const files = (_a = this.trackedFiles[fileName]) !== null && _a !== void 0 ? _a : (this.trackedFiles[fileName] = []);
+            files.push((0, path_utils_1.normalizeFilePath)(filePath));
+        }
+    }
+    parse(filePath, content) {
+        return __awaiter(this, void 0, void 0, function* () {
+            const reportOrSuite = yield this.getJunitReport(filePath, content);
+            const isReport = reportOrSuite.testsuites !== undefined;
+            // XML might contain:
+            // - multiple suites under <testsuites> root node
+            // - single <testsuite> as root node
+            let ju;
+            if (isReport) {
+                ju = reportOrSuite;
+            }
+            else {
+                // Make it behave the same way as if suite was inside <testsuites> root node
+                const suite = reportOrSuite.testsuite;
+                ju = {
+                    testsuites: {
+                        $: { time: suite.$.time },
+                        testsuite: [suite]
+                    }
+                };
+            }
+            return this.getTestRunResult(filePath, ju);
+        });
+    }
+    getJunitReport(filePath, content) {
+        return __awaiter(this, void 0, void 0, function* () {
+            try {
+                return yield (0, xml2js_1.parseStringPromise)(content);
+            }
+            catch (e) {
+                throw new Error(`Invalid XML at ${filePath}\n\n${e}`);
+            }
+        });
+    }
+    getTestRunResult(filePath, junit) {
+        var _a;
+        const suites = junit.testsuites.testsuite === undefined
+            ? []
+            : junit.testsuites.testsuite.map(ts => {
+                const name = ts.$.name.trim();
+                const time = parseFloat(ts.$.time) * 1000;
+                const sr = new test_results_1.TestSuiteResult(name, this.getGroups(ts), time);
+                return sr;
+            });
+        const seconds = parseFloat((_a = junit.testsuites.$) === null || _a === void 0 ? void 0 : _a.time);
+        const time = isNaN(seconds) ? undefined : seconds * 1000;
+        return new test_results_1.TestRunResult(filePath, suites, time);
+    }
+    getGroups(suite) {
+        if (suite.testcase === undefined) {
+            return [];
+        }
+        const groups = [];
+        for (const tc of suite.testcase) {
+            // Normally classname is same as suite name - both refer to same Java class
+            // Therefore it doesn't make sense to process it as a group
+            // and tests will be added to default group with empty name
+            const className = tc.$.classname === suite.$.name ? '' : tc.$.classname;
+            let grp = groups.find(g => g.name === className);
+            if (grp === undefined) {
+                grp = { name: className, tests: [] };
+                groups.push(grp);
+            }
+            grp.tests.push(tc);
+        }
+        return groups.map(grp => {
+            const tests = grp.tests.map(tc => {
+                const name = tc.$.name.trim();
+                const result = this.getTestCaseResult(tc);
+                const time = parseFloat(tc.$.time) * 1000;
+                const error = this.getTestCaseError(tc);
+                return new test_results_1.TestCaseResult(name, result, time, error);
+            });
+            return new test_results_1.TestGroupResult(grp.name, tests);
+        });
+    }
+    getTestCaseResult(test) {
+        if (test.failure || test.error)
+            return 'failed';
+        if (test.skipped)
+            return 'skipped';
+        return 'success';
+    }
+    getTestCaseError(tc) {
+        var _a;
+        if (!this.options.parseErrors) {
+            return undefined;
+        }
+        // We process <error> and <failure> the same way
+        const failures = (_a = tc.failure) !== null && _a !== void 0 ? _a : tc.error;
+        if (!failures) {
+            return undefined;
+        }
+        const failure = failures[0];
+        const details = typeof failure === 'object' ? failure._ : failure;
+        let filePath;
+        let line;
+        if (details != null) {
+            const src = this.exceptionThrowSource(details);
+            if (src) {
+                filePath = src.filePath;
+                line = src.line;
+            }
+        }
+        return {
+            path: filePath,
+            line,
+            details,
+            message: typeof failure === 'object' ? failure.message : undefined
+        };
+    }
+    exceptionThrowSource(stackTrace) {
+        const lines = stackTrace.split(/\r?\n/);
+        for (const str of lines) {
+            const stackTraceElement = (0, java_stack_trace_element_parser_1.parseStackTraceElement)(str);
+            if (stackTraceElement) {
+                const { tracePath, fileName, lineStr } = stackTraceElement;
+                const filePath = this.getFilePath(tracePath, fileName);
+                if (filePath !== undefined) {
+                    const line = parseInt(lineStr);
+                    return { filePath, line };
+                }
+            }
+        }
+    }
+    // Stacktrace in Java doesn't contain full paths to source file.
+    // There are only package, file name and line.
+    // Assuming folder structure matches package name (as it should in Java),
+    // we can try to match tracked file.
+    getFilePath(tracePath, fileName) {
+        // Check if there is any tracked file with given name
+        const files = this.trackedFiles[fileName];
+        if (files === undefined) {
+            return undefined;
+        }
+        // Remove class name and method name from trace.
+        // Take parts until first item with capital letter - package names are lowercase while class name is CamelCase.
+        const packageParts = tracePath.split(/\./g);
+        const packageIndex = packageParts.findIndex(part => part[0] <= 'Z');
+        if (packageIndex !== -1) {
+            packageParts.splice(packageIndex, packageParts.length - packageIndex);
+        }
+        if (packageParts.length === 0) {
+            return undefined;
+        }
+        // Get right file
+        // - file name matches
+        // - parent folders structure must reflect the package name
+        for (const filePath of files) {
+            const dirs = path.dirname(filePath).split(/\//g);
+            if (packageParts.length > dirs.length) {
+                continue;
+            }
+            // get only N parent folders, where N = length of package name parts
+            if (dirs.length > packageParts.length) {
+                dirs.splice(0, dirs.length - packageParts.length);
+            }
+            // check if parent folder structure matches package name
+            const isMatch = packageParts.every((part, i) => part === dirs[i]);
+            if (isMatch) {
+                return filePath;
+            }
+        }
+        return undefined;
+    }
+}
+exports.PerlJunitParser = PerlJunitParser;
 
 
 /***/ }),
