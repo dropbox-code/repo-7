@@ -68,7 +68,9 @@ export class AzureOpenAIClient extends OpenAIClient {
         const deployment = this.removeModel(clone);
         const endpoint = (this.options as AzureOpenAIClientOptions).endpoint;
         const apiVersion = (this.options as AzureOpenAIClientOptions).apiVersion ?? '2023-03-15-preview';
-        const url = `${endpoint}/openai/deployments/${deployment}/chat/completions?api-version=${apiVersion}`;
+        const url = request.dataSources?.length
+            ? `${endpoint}/openai/deployments/${deployment}/extensions/chat/completions?api-version=${apiVersion}`
+            : `${endpoint}/openai/deployments/${deployment}/chat/completions?api-version=${apiVersion}`;
         return this.post(url, clone);
     }
 

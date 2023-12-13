@@ -306,7 +306,9 @@ export class OpenAIModel implements PromptCompletionModel {
     protected createChatCompletion(request: CreateChatCompletionRequest): Promise<AxiosResponse<CreateChatCompletionResponse>> {
         if (this._useAzure) {
             const options = this.options as AzureOpenAIModelOptions;
-            const url = `${options.azureEndpoint}/openai/deployments/${options.azureDefaultDeployment}/chat/completions?api-version=${options.azureApiVersion!}`;
+            const url = options.dataSources
+                ? `${options.azureEndpoint}/openai/deployments/${options.azureDefaultDeployment}/extensions/chat/completions?api-version=${options.azureApiVersion!}`
+                : `${options.azureEndpoint}/openai/deployments/${options.azureDefaultDeployment}/chat/completions?api-version=${options.azureApiVersion!}`;
             return this.post(url, request);
         } else {
             const options = this.options as OpenAIModelOptions;
