@@ -201,10 +201,10 @@
   resolved "https://registry.yarnpkg.com/@azure/msal-common/-/msal-common-13.3.1.tgz#012465bf940d12375dc47387b754ccf9d6b92180"
   integrity sha512-Lrk1ozoAtaP/cp53May3v6HtcFSVxdFrg2Pa/1xu5oIvsIwhxW6zSPibKefCOVgd5osgykMi5jjcZHv8XkzZEQ==
 
-"@azure/msal-common@14.4.0":
-  version "14.4.0"
-  resolved "https://registry.yarnpkg.com/@azure/msal-common/-/msal-common-14.4.0.tgz#f938c1d96bb73d65baab985c96faaa273c97cfd5"
-  integrity sha512-ffCymScQuMKVj+YVfwNI52A5Tu+uiZO2eTf+c+3TXxdAssks4nokJhtr+uOOMxH0zDi6d1OjFKFKeXODK0YLSg==
+"@azure/msal-common@14.5.0":
+  version "14.5.0"
+  resolved "https://registry.yarnpkg.com/@azure/msal-common/-/msal-common-14.5.0.tgz#5a891e5f8eaf23f598bdb4e285e938fb606cd716"
+  integrity sha512-Gx5rZbiZV/HiZ2nEKfjfAF/qDdZ4/QWxMvMo2jhIFVz528dVKtaZyFAOtsX2Ak8+TQvRsGCaEfuwJFuXB6tu1A==
 
 "@azure/msal-common@^7.0.0":
   version "7.6.0"
@@ -220,12 +220,12 @@
     jsonwebtoken "^9.0.0"
     uuid "^8.3.0"
 
-"@azure/msal-node@^2.5.1":
-  version "2.5.1"
-  resolved "https://registry.yarnpkg.com/@azure/msal-node/-/msal-node-2.5.1.tgz#d180a1ba5fdc611a318a8f018a2db3453e2e2898"
-  integrity sha512-PsPRISqCG253HQk1cAS7eJW7NWTbnBGpG+vcGGz5z4JYRdnM2EIXlj1aBpXCdozenEPtXEVvHn2ELleW1w82nQ==
+"@azure/msal-node@^2.6.0":
+  version "2.6.0"
+  resolved "https://registry.yarnpkg.com/@azure/msal-node/-/msal-node-2.6.0.tgz#44bad20a1523c92d79de24fb225da86abaeedb6c"
+  integrity sha512-RWAWCYYrSldIYC47oWtofIun41e6SB9TBYgGYsezq6ednagwo9ZRFyRsvl1NabmdTkdDDXRAABIdveeN2Gtd8w==
   dependencies:
-    "@azure/msal-common" "14.4.0"
+    "@azure/msal-common" "14.5.0"
     jsonwebtoken "^9.0.0"
     uuid "^8.3.0"
 
@@ -539,10 +539,10 @@
   resolved "https://registry.yarnpkg.com/@eslint-community/regexpp/-/regexpp-4.6.2.tgz#1816b5f6948029c5eaacb0703b850ee0cb37d8f8"
   integrity sha512-pPTNuaAG3QMH+buKyBIGJs3g/S5y0caxw0ygM3YyE6yJFySwiGGSzA+mM3KJ8QQvzeLh3blwgSonkFjgQdxzMw==
 
-"@eslint/eslintrc@^2.1.3":
-  version "2.1.3"
-  resolved "https://registry.yarnpkg.com/@eslint/eslintrc/-/eslintrc-2.1.3.tgz#797470a75fe0fbd5a53350ee715e85e87baff22d"
-  integrity sha512-yZzuIG+jnVu6hNSzFEN07e8BxF3uAzYtQb6uDkaYZLo6oYZDCq454c5kB8zxnzfCYyP4MIuyBn10L0DqwujTmA==
+"@eslint/eslintrc@^2.1.4":
+  version "2.1.4"
+  resolved "https://registry.yarnpkg.com/@eslint/eslintrc/-/eslintrc-2.1.4.tgz#388a269f0f25c1b6adc317b5a2c55714894c70ad"
+  integrity sha512-269Z39MS6wVJtsoUl10L60WdkhJVdPG24Q4eZTH3nnF6lpvSShEK3wQjDX9JRWAUPvPh7COouPpU9IrqaZFvtQ==
   dependencies:
     ajv "^6.12.4"
     debug "^4.3.2"
@@ -554,10 +554,10 @@
     minimatch "^3.1.2"
     strip-json-comments "^3.1.1"
 
-"@eslint/js@8.54.0":
-  version "8.54.0"
-  resolved "https://registry.yarnpkg.com/@eslint/js/-/js-8.54.0.tgz#4fab9a2ff7860082c304f750e94acd644cf984cf"
-  integrity sha512-ut5V+D+fOoWPgGGNj83GGjnntO39xDy6DWxO0wb7Jp3DcMX0TfIqdzHF85VTQkerdyGmuuMD9AKAo5KiNlf/AQ==
+"@eslint/js@8.55.0":
+  version "8.55.0"
+  resolved "https://registry.yarnpkg.com/@eslint/js/-/js-8.55.0.tgz#b721d52060f369aa259cf97392403cb9ce892ec6"
+  integrity sha512-qQfo2mxH5yVom1kacMtZZJFVdW+E70mqHMJvVg6WTLo+VBuQJ4TojZlfWBjK0ve5BdEeNAVxOsl/nvNMpJOaJA==
 
 "@goto-bus-stop/common-shake@^2.3.0":
   version "2.4.0"
@@ -830,20 +830,6 @@
   version "1.3.1"
   resolved "https://registry.yarnpkg.com/@microsoft/recognizers-text/-/recognizers-text-1.3.1.tgz#eda98a9148101ecdb04ed1424082d472b04aabd9"
   integrity sha512-HikLoRUgSzM4OKP3JVBzUUp3Q7L4wgI17p/3rERF01HVmopcujY3i6wgx8PenCwbenyTNxjr1AwSDSVuFlYedQ==
-
-"@microsoft/teams-ai@file:packages/teams-ai":
-  version "1.0.0-preview.1"
-  dependencies:
-    "@azure/msal-node" "^2.5.1"
-    axios "^1.6.2"
-    botbuilder "^4.21.1"
-    botbuilder-dialogs "^4.21.1"
-    gpt-3-encoder "^1.1.4"
-    json-colorizer "^2.2.2"
-    jsonschema "1.4.1"
-    openai "^4.19.0"
-    uuid "^9.0.1"
-    yaml "^2.3.4"
 
 "@microsoft/teamsfx@^2.3.0":
   version "2.3.0"
@@ -1206,10 +1192,10 @@
     "@types/node" "*"
     form-data "^4.0.0"
 
-"@types/node@*", "@types/node@^20.10.0":
-  version "20.10.0"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-20.10.0.tgz#16ddf9c0a72b832ec4fcce35b8249cf149214617"
-  integrity sha512-D0WfRmU9TQ8I9PFx9Yc+EBHw+vSpIub4IDvQivcp26PtPrdMGAq5SDcpXEo/epqa/DXotVpekHiLNTg3iaKXBQ==
+"@types/node@*", "@types/node@^20.10.3", "@types/node@^20.9.0":
+  version "20.10.3"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-20.10.3.tgz#4900adcc7fc189d5af5bb41da8f543cea6962030"
+  integrity sha512-XJavIpZqiXID5Yxnxv3RUDKTN5b81ddNC3ecsA0SoFXz/QU8OGBwZGMomiq0zw+uuqbL/krztv/DINAQ/EV4gg==
   dependencies:
     undici-types "~5.26.4"
 
@@ -1230,20 +1216,20 @@
   resolved "https://registry.yarnpkg.com/@types/parse-json/-/parse-json-4.0.0.tgz#2f8bb441434d163b35fb8ffdccd7138927ffb8c0"
   integrity sha512-//oorEZjL6sbPcKUaCdIGlIUeH26mgzimjBB77G6XRgnDl/L5wOnpyBGRe/Mmf5CVW3PwEBE1NjiMZ/ssFh4wA==
 
-"@types/restify@8.5.10":
-  version "8.5.10"
-  resolved "https://registry.yarnpkg.com/@types/restify/-/restify-8.5.10.tgz#e21b71216ff0538eac7596310f1f9207d7f4ca17"
-  integrity sha512-JlvrRRnPPkrvhZRV8rol8brv7q2VeImtQQvMviJrnmyzwrUc0n0+rSLZGItc09+XQTreYSOyC+XuqpoEeDzgcw==
+"@types/restify@8.5.11":
+  version "8.5.11"
+  resolved "https://registry.yarnpkg.com/@types/restify/-/restify-8.5.11.tgz#f64077a9f578ca57430ac28509722ad991edaa44"
+  integrity sha512-aMSWmbAKoyKelDQ+J70Vv+ieR6rjvAG0DNyn4XbqO0e69SZJY7ohuqlCzNd7TjgUFY5NcbV0zFyAV7hmxpNLTA==
   dependencies:
     "@types/bunyan" "*"
     "@types/formidable" "^1"
     "@types/node" "*"
     "@types/spdy" "*"
 
-"@types/restify@8.5.11":
-  version "8.5.11"
-  resolved "https://registry.yarnpkg.com/@types/restify/-/restify-8.5.11.tgz#f64077a9f578ca57430ac28509722ad991edaa44"
-  integrity sha512-aMSWmbAKoyKelDQ+J70Vv+ieR6rjvAG0DNyn4XbqO0e69SZJY7ohuqlCzNd7TjgUFY5NcbV0zFyAV7hmxpNLTA==
+"@types/restify@8.5.9":
+  version "8.5.9"
+  resolved "https://registry.yarnpkg.com/@types/restify/-/restify-8.5.9.tgz#9c3753093724bef7131d0322c71cd86b58db1672"
+  integrity sha512-4zXKw10NhlgDsVXcSJXfwjlQQwagITwogEVDM6ouyCOLRsiHfZdAuOkT9sRHBZHd2118TJBBItGx3vqLiGntjQ==
   dependencies:
     "@types/bunyan" "*"
     "@types/formidable" "^1"
@@ -1308,16 +1294,16 @@
   dependencies:
     "@types/yargs-parser" "*"
 
-"@typescript-eslint/eslint-plugin@^6.13.0":
-  version "6.13.0"
-  resolved "https://registry.yarnpkg.com/@typescript-eslint/eslint-plugin/-/eslint-plugin-6.13.0.tgz#c239f9b3800ab14b5479a93812ddbe4a8fc64411"
-  integrity sha512-HTvbSd0JceI2GW5DHS3R9zbarOqjkM9XDR7zL8eCsBUO/eSiHcoNE7kSL5sjGXmVa9fjH5LCfHDXNnH4QLp7tQ==
+"@typescript-eslint/eslint-plugin@^6.13.2":
+  version "6.13.2"
+  resolved "https://registry.yarnpkg.com/@typescript-eslint/eslint-plugin/-/eslint-plugin-6.13.2.tgz#2e03506c5362a65e43cb132c37c9ce2d3cb51470"
+  integrity sha512-3+9OGAWHhk4O1LlcwLBONbdXsAhLjyCFogJY/cWy2lxdVJ2JrcTF2pTGMaLl2AE7U1l31n8Py4a8bx5DLf/0dQ==
   dependencies:
     "@eslint-community/regexpp" "^4.5.1"
-    "@typescript-eslint/scope-manager" "6.13.0"
-    "@typescript-eslint/type-utils" "6.13.0"
-    "@typescript-eslint/utils" "6.13.0"
-    "@typescript-eslint/visitor-keys" "6.13.0"
+    "@typescript-eslint/scope-manager" "6.13.2"
+    "@typescript-eslint/type-utils" "6.13.2"
+    "@typescript-eslint/utils" "6.13.2"
+    "@typescript-eslint/visitor-keys" "6.13.2"
     debug "^4.3.4"
     graphemer "^1.4.0"
     ignore "^5.2.4"
@@ -1325,72 +1311,72 @@
     semver "^7.5.4"
     ts-api-utils "^1.0.1"
 
-"@typescript-eslint/parser@^6.13.0":
-  version "6.13.0"
-  resolved "https://registry.yarnpkg.com/@typescript-eslint/parser/-/parser-6.13.0.tgz#ddb2be591c347ff292165ecffbd0b6d508d7463a"
-  integrity sha512-VpG+M7GNhHLI/aTDctqAV0XbzB16vf+qDX9DXuMZSe/0bahzDA9AKZB15NDbd+D9M4cDsJvfkbGOA7qiZ/bWJw==
+"@typescript-eslint/parser@^6.13.2":
+  version "6.13.2"
+  resolved "https://registry.yarnpkg.com/@typescript-eslint/parser/-/parser-6.13.2.tgz#390b79cc9a57a5f904d197a201cc4b6bc4f9afb9"
+  integrity sha512-MUkcC+7Wt/QOGeVlM8aGGJZy1XV5YKjTpq9jK6r6/iLsGXhBVaGP5N0UYvFsu9BFlSpwY9kMretzdBH01rkRXg==
   dependencies:
-    "@typescript-eslint/scope-manager" "6.13.0"
-    "@typescript-eslint/types" "6.13.0"
-    "@typescript-eslint/typescript-estree" "6.13.0"
-    "@typescript-eslint/visitor-keys" "6.13.0"
+    "@typescript-eslint/scope-manager" "6.13.2"
+    "@typescript-eslint/types" "6.13.2"
+    "@typescript-eslint/typescript-estree" "6.13.2"
+    "@typescript-eslint/visitor-keys" "6.13.2"
     debug "^4.3.4"
 
-"@typescript-eslint/scope-manager@6.13.0":
-  version "6.13.0"
-  resolved "https://registry.yarnpkg.com/@typescript-eslint/scope-manager/-/scope-manager-6.13.0.tgz#343665d5c87c78ebea38ab4577ad3ece0751f331"
-  integrity sha512-2x0K2/CujsokIv+LN2T0l5FVDMtsCjkUyYtlcY4xxnxLAW+x41LXr16duoicHpGtLhmtN7kqvuFJ3zbz00Ikhw==
+"@typescript-eslint/scope-manager@6.13.2":
+  version "6.13.2"
+  resolved "https://registry.yarnpkg.com/@typescript-eslint/scope-manager/-/scope-manager-6.13.2.tgz#5fa4e4adace028dafac212c770640b94e7b61052"
+  integrity sha512-CXQA0xo7z6x13FeDYCgBkjWzNqzBn8RXaE3QVQVIUm74fWJLkJkaHmHdKStrxQllGh6Q4eUGyNpMe0b1hMkXFA==
   dependencies:
-    "@typescript-eslint/types" "6.13.0"
-    "@typescript-eslint/visitor-keys" "6.13.0"
+    "@typescript-eslint/types" "6.13.2"
+    "@typescript-eslint/visitor-keys" "6.13.2"
 
-"@typescript-eslint/type-utils@6.13.0":
-  version "6.13.0"
-  resolved "https://registry.yarnpkg.com/@typescript-eslint/type-utils/-/type-utils-6.13.0.tgz#71e96a5f718b6857eba499136d109239c8f87f55"
-  integrity sha512-YHufAmZd/yP2XdoD3YeFEjq+/Tl+myhzv+GJHSOz+ro/NFGS84mIIuLU3pVwUcauSmwlCrVXbBclkn1HfjY0qQ==
+"@typescript-eslint/type-utils@6.13.2":
+  version "6.13.2"
+  resolved "https://registry.yarnpkg.com/@typescript-eslint/type-utils/-/type-utils-6.13.2.tgz#ebec2da14a6bb7122e0fd31eea72a382c39c6102"
+  integrity sha512-Qr6ssS1GFongzH2qfnWKkAQmMUyZSyOr0W54nZNU1MDfo+U4Mv3XveeLZzadc/yq8iYhQZHYT+eoXJqnACM1tw==
   dependencies:
-    "@typescript-eslint/typescript-estree" "6.13.0"
-    "@typescript-eslint/utils" "6.13.0"
+    "@typescript-eslint/typescript-estree" "6.13.2"
+    "@typescript-eslint/utils" "6.13.2"
     debug "^4.3.4"
     ts-api-utils "^1.0.1"
 
-"@typescript-eslint/types@6.13.0":
-  version "6.13.0"
-  resolved "https://registry.yarnpkg.com/@typescript-eslint/types/-/types-6.13.0.tgz#45147f658ae0aa33a3999cdf1727613d6467c271"
-  integrity sha512-oXg7DFxx/GmTrKXKKLSoR2rwiutOC7jCQ5nDH5p5VS6cmHE1TcPTaYQ0VPSSUvj7BnNqCgQ/NXcTBxn59pfPTQ==
+"@typescript-eslint/types@6.13.2":
+  version "6.13.2"
+  resolved "https://registry.yarnpkg.com/@typescript-eslint/types/-/types-6.13.2.tgz#c044aac24c2f6cefb8e921e397acad5417dd0ae6"
+  integrity sha512-7sxbQ+EMRubQc3wTfTsycgYpSujyVbI1xw+3UMRUcrhSy+pN09y/lWzeKDbvhoqcRbHdc+APLs/PWYi/cisLPg==
 
-"@typescript-eslint/typescript-estree@6.13.0":
-  version "6.13.0"
-  resolved "https://registry.yarnpkg.com/@typescript-eslint/typescript-estree/-/typescript-estree-6.13.0.tgz#4975f49c1a7a035720bc2b1f7862a61d30d52943"
-  integrity sha512-IT4O/YKJDoiy/mPEDsfOfp+473A9GVqXlBKckfrAOuVbTqM8xbc0LuqyFCcgeFWpqu3WjQexolgqN2CuWBYbog==
+"@typescript-eslint/typescript-estree@6.13.2":
+  version "6.13.2"
+  resolved "https://registry.yarnpkg.com/@typescript-eslint/typescript-estree/-/typescript-estree-6.13.2.tgz#ae556ee154c1acf025b48d37c3ef95a1d55da258"
+  integrity sha512-SuD8YLQv6WHnOEtKv8D6HZUzOub855cfPnPMKvdM/Bh1plv1f7Q/0iFUDLKKlxHcEstQnaUU4QZskgQq74t+3w==
   dependencies:
-    "@typescript-eslint/types" "6.13.0"
-    "@typescript-eslint/visitor-keys" "6.13.0"
+    "@typescript-eslint/types" "6.13.2"
+    "@typescript-eslint/visitor-keys" "6.13.2"
     debug "^4.3.4"
     globby "^11.1.0"
     is-glob "^4.0.3"
     semver "^7.5.4"
     ts-api-utils "^1.0.1"
 
-"@typescript-eslint/utils@6.13.0":
-  version "6.13.0"
-  resolved "https://registry.yarnpkg.com/@typescript-eslint/utils/-/utils-6.13.0.tgz#f2ee6ba06cf76c1879fd7dfceb6a5f886d70985c"
-  integrity sha512-V+txaxARI8yznDkcQ6FNRXxG+T37qT3+2NsDTZ/nKLxv6VfGrRhTnuvxPUxpVuWWr+eVeIxU53PioOXbz8ratQ==
+"@typescript-eslint/utils@6.13.2":
+  version "6.13.2"
+  resolved "https://registry.yarnpkg.com/@typescript-eslint/utils/-/utils-6.13.2.tgz#8eb89e53adc6d703a879b131e528807245486f89"
+  integrity sha512-b9Ptq4eAZUym4idijCRzl61oPCwwREcfDI8xGk751Vhzig5fFZR9CyzDz4Sp/nxSLBYxUPyh4QdIDqWykFhNmQ==
   dependencies:
     "@eslint-community/eslint-utils" "^4.4.0"
     "@types/json-schema" "^7.0.12"
     "@types/semver" "^7.5.0"
-    "@typescript-eslint/scope-manager" "6.13.0"
-    "@typescript-eslint/types" "6.13.0"
-    "@typescript-eslint/typescript-estree" "6.13.0"
+    "@typescript-eslint/scope-manager" "6.13.2"
+    "@typescript-eslint/types" "6.13.2"
+    "@typescript-eslint/typescript-estree" "6.13.2"
     semver "^7.5.4"
 
-"@typescript-eslint/visitor-keys@6.13.0":
-  version "6.13.0"
-  resolved "https://registry.yarnpkg.com/@typescript-eslint/visitor-keys/-/visitor-keys-6.13.0.tgz#1b57d83fb74e2d7a02382e1ee6abda92ca5973f4"
-  integrity sha512-UQklteCEMCRoq/1UhKFZsHv5E4dN1wQSzJoxTfABasWk1HgJRdg1xNUve/Kv/Sdymt4x+iEzpESOqRFlQr/9Aw==
+"@typescript-eslint/visitor-keys@6.13.2":
+  version "6.13.2"
+  resolved "https://registry.yarnpkg.com/@typescript-eslint/visitor-keys/-/visitor-keys-6.13.2.tgz#e0a4a80cf842bb08e6127b903284166ac4a5594c"
+  integrity sha512-OGznFs0eAQXJsp+xSd6k/O1UbFi/K/L7WjqeRoFE7vadjAF9y0uppXhYNQNEqygjou782maGClOoZwPqF0Drlw==
   dependencies:
-    "@typescript-eslint/types" "6.13.0"
+    "@typescript-eslint/types" "6.13.2"
     eslint-visitor-keys "^3.4.1"
 
 "@ungap/structured-clone@^1.2.0":
@@ -2126,60 +2112,60 @@ boolbase@^1.0.0:
   resolved "https://registry.yarnpkg.com/boolbase/-/boolbase-1.0.0.tgz#68dff5fbe60c51eb37725ea9e3ed310dcc1e776e"
   integrity sha512-JZOSA7Mo9sNGB8+UjSgzdLtokWAky1zbztM3WRLCbZ70/3cTANmQmOdR7y2g+J0e2WXywy1yS468tY+IruqEww==
 
-botbuilder-core@4.21.1:
-  version "4.21.1"
-  resolved "https://registry.yarnpkg.com/botbuilder-core/-/botbuilder-core-4.21.1.tgz#33a0c4a9e532ce7c182145978bc0c777ddd858d3"
-  integrity sha512-CqS9CwafEMd69jKxyyRqCYrEvzZLzDEu/VIfnGerM5NTwUsEpR7/4UFfcr00K2+vXrntDPKu20M3lMdunD81Pw==
+botbuilder-core@4.21.2:
+  version "4.21.2"
+  resolved "https://registry.yarnpkg.com/botbuilder-core/-/botbuilder-core-4.21.2.tgz#905406ef12729a12e49c19b0e31e7a7a4b52c6fd"
+  integrity sha512-17dEluyBD2VTKzM+2MzGz5Zh4y9+F+q4EC2J1fTjahC6/h8k6BWMd9SxWo/r66IjMllxZdQ/9z0Kd2uz/ijJUA==
   dependencies:
-    botbuilder-dialogs-adaptive-runtime-core "4.21.1-preview"
-    botbuilder-stdlib "4.21.1-internal"
-    botframework-connector "4.21.1"
-    botframework-schema "4.21.1"
+    botbuilder-dialogs-adaptive-runtime-core "4.21.2-preview"
+    botbuilder-stdlib "4.21.2-internal"
+    botframework-connector "4.21.2"
+    botframework-schema "4.21.2"
     uuid "^8.3.2"
     zod "^3.22.4"
 
-botbuilder-dialogs-adaptive-runtime-core@4.21.1-preview:
-  version "4.21.1-preview"
-  resolved "https://registry.yarnpkg.com/botbuilder-dialogs-adaptive-runtime-core/-/botbuilder-dialogs-adaptive-runtime-core-4.21.1-preview.tgz#d3789c62138e992ab27b9274b06432b2d3b1c611"
-  integrity sha512-oSsRfhLOEdbkLPgNQTHXaf1NKCzYpvtuuc5q8bDoDYf3riAQhwAeoAFrgUci/6dQkIVELzALCb1Cd210kWBBgg==
+botbuilder-dialogs-adaptive-runtime-core@4.21.2-preview:
+  version "4.21.2-preview"
+  resolved "https://registry.yarnpkg.com/botbuilder-dialogs-adaptive-runtime-core/-/botbuilder-dialogs-adaptive-runtime-core-4.21.2-preview.tgz#f61e51ec5677f982db41f73fd4a763df7949fa91"
+  integrity sha512-xFTA96SRDSvS33fpxcAAVHttDPrLATWraF2jYadL9QeLLNPQVRfw4ycnzpepyAQNPnJBYdEiHLZa5POO60RJSw==
   dependencies:
     dependency-graph "^0.10.0"
 
-"botbuilder-dialogs@>=4.18.0 <5.0.0", botbuilder-dialogs@^4.21.0, botbuilder-dialogs@^4.21.1:
-  version "4.21.1"
-  resolved "https://registry.yarnpkg.com/botbuilder-dialogs/-/botbuilder-dialogs-4.21.1.tgz#20def4cb23b3b4caf3acc99b54364bec2385a895"
-  integrity sha512-flYakT2p5PPvIJ59oPSppJIpzNPKarAsevk4LmlYbx0C1VU9z2FRMrDXo79oOI+VU4ndFbqLo2wvPRvTsvVgQw==
+"botbuilder-dialogs@>=4.18.0 <5.0.0", botbuilder-dialogs@^4.21.2:
+  version "4.21.2"
+  resolved "https://registry.yarnpkg.com/botbuilder-dialogs/-/botbuilder-dialogs-4.21.2.tgz#63271a667e35f3ac0b14006ade5614b451cc193a"
+  integrity sha512-awVyZ/8XsfVKTQbrKmQelxfqNUPtdo/KywNrsGVLPqG/llTqBGS9rG+wPBWXrNnB5PTxSYVXF3iIuXHFFtBzSg==
   dependencies:
     "@microsoft/recognizers-text-choice" "1.1.4"
     "@microsoft/recognizers-text-date-time" "1.1.4"
     "@microsoft/recognizers-text-number" "1.3.1"
     "@microsoft/recognizers-text-suite" "1.1.4"
-    botbuilder-core "4.21.1"
-    botbuilder-dialogs-adaptive-runtime-core "4.21.1-preview"
-    botframework-connector "4.21.1"
+    botbuilder-core "4.21.2"
+    botbuilder-dialogs-adaptive-runtime-core "4.21.2-preview"
+    botframework-connector "4.21.2"
     globalize "^1.4.2"
     lodash "^4.17.21"
     uuid "^8.3.2"
     zod "^3.22.4"
 
-botbuilder-stdlib@4.21.1-internal:
-  version "4.21.1-internal"
-  resolved "https://registry.yarnpkg.com/botbuilder-stdlib/-/botbuilder-stdlib-4.21.1-internal.tgz#3592dafe4d67571bdc1d2526e0fdd2255347773e"
-  integrity sha512-weHVc7H9nnxrT+gj9WEahxPQEELdsPI02dgnCOLExusdBBJ7DI32I9o5+0kUgeJvjVtNhf7BxOoJoOqqKb02Fg==
+botbuilder-stdlib@4.21.2-internal:
+  version "4.21.2-internal"
+  resolved "https://registry.yarnpkg.com/botbuilder-stdlib/-/botbuilder-stdlib-4.21.2-internal.tgz#6a317ca8e960f73ba3f57947ab93192bc5de9dea"
+  integrity sha512-M7n0RcmjlCipKS92E7ddxpBcRF0A85btQRNOd3+gpzGptk6YU0FMvE70+besVANxFHQQTMPwuwAdxVWBD2e4MA==
 
-"botbuilder@>=4.18.0 <5.0.0", botbuilder@^4.21.0, botbuilder@^4.21.1:
-  version "4.21.1"
-  resolved "https://registry.yarnpkg.com/botbuilder/-/botbuilder-4.21.1.tgz#c806ccd7eff8faeab81d465f04719e8a08f01d6b"
-  integrity sha512-fP5g5wTHScAUOtoviERogXOigubTKe6oLWkrxgtCLFPlX0mjgqYsh4+SyxEVWf9IGFUfHOnI8ZI34gqsXwCy2w==
+"botbuilder@>=4.18.0 <5.0.0", botbuilder@^4.21.0, botbuilder@^4.21.2:
+  version "4.21.2"
+  resolved "https://registry.yarnpkg.com/botbuilder/-/botbuilder-4.21.2.tgz#3458064c451c4316b35b3a957778119824d1517c"
+  integrity sha512-3o4y+b7a2D+CnYYIlCctFwrz1isHK32tKw9I37k6+p47q4CeWyXf2pgnooJjkNz10HcdN1uE2hgEH8c6xY+AQw==
   dependencies:
     "@azure/ms-rest-js" "^2.7.0"
     "@azure/msal-node" "^1.2.0"
     axios "^0.25.0"
-    botbuilder-core "4.21.1"
-    botbuilder-stdlib "4.21.1-internal"
-    botframework-connector "4.21.1"
-    botframework-schema "4.21.1"
-    botframework-streaming "4.21.1"
+    botbuilder-core "4.21.2"
+    botbuilder-stdlib "4.21.2-internal"
+    botframework-connector "4.21.2"
+    botframework-schema "4.21.2"
+    botframework-streaming "4.21.2"
     dayjs "^1.10.3"
     filenamify "^4.1.0"
     fs-extra "^7.0.1"
@@ -2187,36 +2173,36 @@ botbuilder-stdlib@4.21.1-internal:
     uuid "^8.3.2"
     zod "^3.22.4"
 
-botframework-connector@4.21.1:
-  version "4.21.1"
-  resolved "https://registry.yarnpkg.com/botframework-connector/-/botframework-connector-4.21.1.tgz#ba148a4d1975c238c1d55dcbc0fa0fbdcedc3eb9"
-  integrity sha512-lU9mGwVPnditOE9J2TPihYhkQkv3L0s+bZ+hfUDHMwrKa+h6ncvB1EaVoQd9BU/7jEpWq/O1LUIZdRhsYGKLSg==
+botframework-connector@4.21.2:
+  version "4.21.2"
+  resolved "https://registry.yarnpkg.com/botframework-connector/-/botframework-connector-4.21.2.tgz#a87145e6c346438c84c78b48a33ba5e2d0ac0927"
+  integrity sha512-UfjBEO3iVo1iiiBSM0rkrblWVPvWA6ry5Dlj2ONJhz+eAGz5o3w0almtI45tZIJIS7/4UYyahl9wv9XvT5xJZw==
   dependencies:
     "@azure/identity" "^2.0.4"
     "@azure/ms-rest-js" "^2.7.0"
     "@azure/msal-node" "^1.2.0"
     axios "^0.25.0"
     base64url "^3.0.0"
-    botbuilder-stdlib "4.21.1-internal"
-    botframework-schema "4.21.1"
+    botbuilder-stdlib "4.21.2-internal"
+    botframework-schema "4.21.2"
     cross-fetch "^3.0.5"
     jsonwebtoken "^9.0.0"
     rsa-pem-from-mod-exp "^0.8.4"
     zod "^3.22.4"
 
-botframework-schema@4.21.1, "botframework-schema@>=4.18.0 <5.0.0":
-  version "4.21.1"
-  resolved "https://registry.yarnpkg.com/botframework-schema/-/botframework-schema-4.21.1.tgz#ee8b8460c4b82cc0c71d918fe4f02a0d6ea249ed"
-  integrity sha512-Edj+qSObpUI32Q7j/KSoPXgKdleIVQiLnNjeAxN/DSVqOaCGjdkYBK6VusLR67gaBo0pG8WDzQw/ALFGhQj9DQ==
+botframework-schema@4.21.2, "botframework-schema@>=4.18.0 <5.0.0":
+  version "4.21.2"
+  resolved "https://registry.yarnpkg.com/botframework-schema/-/botframework-schema-4.21.2.tgz#e4bdf039299ff6c7407e9996c078ef181096c682"
+  integrity sha512-iLXDuS/ptJuGVNGy5B6s6xXyasB8W2DbbwC67rsJE+wP5x7Yx4VyXo13c0uSHRbRPu81CHkVkxOJI0f7kH+jsA==
   dependencies:
     adaptivecards "1.2.3"
     uuid "^8.3.2"
     zod "^3.22.4"
 
-botframework-streaming@4.21.1:
-  version "4.21.1"
-  resolved "https://registry.yarnpkg.com/botframework-streaming/-/botframework-streaming-4.21.1.tgz#a94c5d4e0b6748165ea102cc9163a15cbe1f6a20"
-  integrity sha512-2sDTihO5PslGGLftk5CoBGSUmsi2/BMnSwrIISFShgovtH3dmuaHeVX88muSWnG40U4bCmP26T8HcbdDVdojYw==
+botframework-streaming@4.21.2:
+  version "4.21.2"
+  resolved "https://registry.yarnpkg.com/botframework-streaming/-/botframework-streaming-4.21.2.tgz#f5d5d516fcfba6bdd398226c7f0aa39d561edbea"
+  integrity sha512-xhm8NFaotEiGXOJF+t1ot8ETdVGnTzIJwOx/vBn5xzlYkTuYRL/E7ToWNXEcaOtb2rfUGIVjZFJXZApEEbUYOA==
   dependencies:
     "@types/node" "^10.17.27"
     "@types/ws" "^6.0.3"
@@ -4084,15 +4070,15 @@ eslint-visitor-keys@^3.3.0, eslint-visitor-keys@^3.4.1, eslint-visitor-keys@^3.4
   resolved "https://registry.yarnpkg.com/eslint-visitor-keys/-/eslint-visitor-keys-3.4.3.tgz#0cd72fe8550e3c2eae156a96a4dddcd1c8ac5800"
   integrity sha512-wpc+LXeiyiisxPlEkUzU6svyS1frIO3Mgxj1fdy7Pm8Ygzguax2N3Fa/D/ag1WqbOprdI+uY6wMUl8/a2G+iag==
 
-eslint@^8.54.0:
-  version "8.54.0"
-  resolved "https://registry.yarnpkg.com/eslint/-/eslint-8.54.0.tgz#588e0dd4388af91a2e8fa37ea64924074c783537"
-  integrity sha512-NY0DfAkM8BIZDVl6PgSa1ttZbx3xHgJzSNJKYcQglem6CppHyMhRIQkBVSSMaSRnLhig3jsDbEzOjwCVt4AmmA==
+eslint@^8.55.0:
+  version "8.55.0"
+  resolved "https://registry.yarnpkg.com/eslint/-/eslint-8.55.0.tgz#078cb7b847d66f2c254ea1794fa395bf8e7e03f8"
+  integrity sha512-iyUUAM0PCKj5QpwGfmCAG9XXbZCWsqP/eWAWrG/W0umvjuLRBECwSFdt+rCntju0xEH7teIABPwXpahftIaTdA==
   dependencies:
     "@eslint-community/eslint-utils" "^4.2.0"
     "@eslint-community/regexpp" "^4.6.1"
-    "@eslint/eslintrc" "^2.1.3"
-    "@eslint/js" "8.54.0"
+    "@eslint/eslintrc" "^2.1.4"
+    "@eslint/js" "8.55.0"
     "@humanwhocodes/config-array" "^0.11.13"
     "@humanwhocodes/module-importer" "^1.0.1"
     "@nodelib/fs.walk" "^1.2.8"
@@ -7220,10 +7206,10 @@ openai@^3.2.1:
     axios "^0.26.0"
     form-data "^4.0.0"
 
-openai@^4.19.0:
-  version "4.19.0"
-  resolved "https://registry.yarnpkg.com/openai/-/openai-4.19.0.tgz#201bf971d2296b028f852fe9dabf61c4e5b96e71"
-  integrity sha512-cJbl0noZyAaXVKBTMMq6X5BAvP1pm2rWYDBnZes99NL+Zh5/4NmlAwyuhTZEru5SqGGZIoiYKeMPXy4bm9DI0w==
+openai@^4.20.1:
+  version "4.20.1"
+  resolved "https://registry.yarnpkg.com/openai/-/openai-4.20.1.tgz#afa0d496d125b5a0f6cebcb4b9aeabf71e00214e"
+  integrity sha512-Dd3q8EvINfganZFtg6V36HjrMaihqRgIcKiHua4Nq9aw/PxOP48dhbsk8x5klrxajt5Lpnc1KTOG5i1S6BKAJA==
   dependencies:
     "@types/node" "^18.11.18"
     "@types/node-fetch" "^2.6.4"
