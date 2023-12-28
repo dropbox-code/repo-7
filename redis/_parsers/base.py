@@ -77,6 +77,7 @@ class BaseParser(ABC):
     @classmethod
     def parse_error(cls, response):
         "Parse an error response"
+        print("inside _parsers.base.BaseParser.parse_error", response)
         error_code = response.split(" ")[0]
         if error_code in cls.EXCEPTION_CLASSES:
             response = response[len(error_code) + 1 :]

@@ -536,7 +536,6 @@ class AbstractConnection:
                 "Encountered error in connection.AbstractionConnection.read_response",
                 type(response),
                 response.__class__,
-                [cls.__name__ for cls in response.__class__.__subclasses__()],
                 response,
             )
             try:
