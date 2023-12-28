@@ -532,6 +532,7 @@ class AbstractConnection:
             self.next_health_check = time() + self.health_check_interval
 
         if isinstance(response, ResponseError):
+            print("Encountered error in connection.AbstractionConnection.read_response", type(ResponseError), response.__class__, response)
             try:
                 raise response
             finally:
