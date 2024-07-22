@@ -33,6 +33,12 @@ inputs:
     default: true
     type: boolean
 
+  run-prev-coverage:
+    description: "Run test coverage check on base branch"
+    required: false
+    default: true
+    type: boolean
+
   run-behind-by:
     description: "Run behind by check"
     required: false

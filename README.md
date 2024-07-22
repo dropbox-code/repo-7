@@ -35,9 +35,22 @@ jobs:
 | run-tests         | Whether tests should be run.                                      | false    | true    |
 | run-analysis      | Whether static analysis should be run.                            | false    | true    |
 | run-coverage      | Whether code coverage should be run.                              | false    | true    |
+| run-prev-coverage | Whether code coverage should be compared with the base branch.    | false    | true    |
 | run-behind-by     | Whether action should check if HEAD branch is behind base branch. | false    | true    |
 | create-comment    | Whether the action should comment the output status.              | false    | true    |
 | working-directory | Working directory to run the action in                            | false    | "."     |
+
+## Coverage
+
+⚠️ To compare coverage against previous code, it is required that the code is checked out with `fetch-depth: 0`:
+
+```yaml
+- uses: actions/checkout@v4
+    with:
+      fetch-depth: 0
+```
+
+> During the action, coverage will be calculated, and lcov.info will be saved in temporary directory `.coverage`. Please refrain from using a top level directory with this path, as this could cause issues.
 
 ## Contributing
 
