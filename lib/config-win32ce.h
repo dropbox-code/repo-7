@@ -25,7 +25,7 @@
  ***************************************************************************/
 
 /* ================================================================ */
-/*  lib/config-win32ce.h - Hand crafted config file for windows ce  */
+/*  lib/config-win32ce.h - Hand crafted config file for Windows CE  */
 /* ================================================================ */
 
 /* ---------------------------------------------------------------- */
@@ -84,15 +84,6 @@
 #if defined(__MINGW32__)
 #define HAVE_UNISTD_H 1
 #endif
-
-/* Define if you have the <windows.h> header file.  */
-#define HAVE_WINDOWS_H 1
-
-/* Define if you have the <winsock2.h> header file.  */
-#define HAVE_WINSOCK2_H 1
-
-/* Define if you have the <ws2tcpip.h> header file.  */
-#define HAVE_WS2TCPIP_H 1
 
 /* ---------------------------------------------------------------- */
 /*                        OTHER HEADER INFO                         */
@@ -288,7 +279,7 @@
 #define PACKAGE "curl"
 
 /* ---------------------------------------------------------------- */
-/*                       WinCE                                      */
+/*                            Windows CE                            */
 /* ---------------------------------------------------------------- */
 
 #ifndef UNICODE
