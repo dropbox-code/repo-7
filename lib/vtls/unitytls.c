@@ -234,7 +234,7 @@ static size_t unitytls_on_write(void* userData, const UInt8* buf, size_t blen, u
   CURLcode result;
 
   DEBUGASSERT(data);
-  nwritten = Curl_conn_cf_send(cf->next, data, (char *)buf, blen, &result);
+  nwritten = Curl_conn_cf_send(cf->next, data, (char *)buf, blen, FALSE, &result);
   if(nwritten < 0 && CURLE_AGAIN == result) {
     unitytls->unitytls_errorstate_raise_error(errorState, UNITYTLS_USER_WOULD_BLOCK);
     return 0;
