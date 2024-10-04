@@ -558,9 +558,7 @@ static CURLcode unitytls_connect_common(struct Curl_cfilter *cf, struct Curl_eas
   }
 
 
-  while(ssl_connect_2 == connssl->connecting_state ||
-        ssl_connect_2_reading == connssl->connecting_state ||
-        ssl_connect_2_writing == connssl->connecting_state) {
+  while(ssl_connect_2 == connssl->connecting_state) {
 
     /* check allowed time left */
     if(Curl_timeleft(data, NULL, TRUE) < 0) {
