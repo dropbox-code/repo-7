@@ -234,7 +234,7 @@ static size_t unitytls_on_write(void* userData, const UInt8* buf, size_t blen, u
   CURLcode result;
 
   DEBUGASSERT(data);
-  nwritten = Curl_conn_cf_send(cf->next, data, (char *)buf, blen, &result);
+  nwritten = Curl_conn_cf_send(cf->next, data, (char *)buf, blen, FALSE, &result);
   if(nwritten < 0 && CURLE_AGAIN == result) {
     unitytls->unitytls_errorstate_raise_error(errorState, UNITYTLS_USER_WOULD_BLOCK);
     return 0;
@@ -558,9 +558,7 @@ static CURLcode unitytls_connect_common(struct Curl_cfilter *cf, struct Curl_eas
   }
 
 
-  while(ssl_connect_2 == connssl->connecting_state ||
-        ssl_connect_2_reading == connssl->connecting_state ||
-        ssl_connect_2_writing == connssl->connecting_state) {
+  while(ssl_connect_2 == connssl->connecting_state) {
 
     /* check allowed time left */
     if(Curl_timeleft(data, NULL, TRUE) < 0) {
@@ -691,7 +689,6 @@ const struct Curl_ssl Curl_ssl_unitytls = {
   Curl_unitytls_get_internals,      /* get_internals */
   Curl_unitytls_close,              /* close_one */
   Curl_none_close_all,              /* close_all */
-  Curl_none_session_free,           /* session_free */
   Curl_none_set_engine,             /* set_engine */
   Curl_none_set_engine_default,     /* set_engine_default */
   Curl_none_engines_list,           /* engines_list */
@@ -699,9 +696,9 @@ const struct Curl_ssl Curl_ssl_unitytls = {
   NULL,                             /* sha256sum */
   NULL,                             /* associate_connection */
   NULL,                             /* disassociate_connection */
-  NULL,                             /* free_multi_ssl_backend_data */
   unitytls_recv,                    /* recv_plain */
   unitytls_send,                    /* send_plain */
+  NULL,                             /* get_channel_binding */
 };
 
 #endif /* USE_UNITYTLS */

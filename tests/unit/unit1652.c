@@ -21,6 +21,8 @@
  * SPDX-License-Identifier: curl
  *
  ***************************************************************************/
+#define CURL_NO_FMT_CHECKS
+
 #include "curlcheck.h"
 
 #include "urldata.h"
@@ -105,7 +107,7 @@ fail_unless(verify(result, "Simple Test 42 testing 43\n") == 0,
 /* Variations of empty strings */
 Curl_infof(data, "");
 fail_unless(strlen(result) == 1, "Empty string");
-Curl_infof(data, "%s", NULL);
+Curl_infof(data, "%s", (char *)NULL);
 fail_unless(verify(result, "(nil)") == 0, "Passing NULL as string");
 
 /* A string just long enough to not be truncated */
@@ -117,24 +119,24 @@ fail_unless(verify(result, input) == 0, "No truncation of infof input");
 fail_unless(result[sizeof(result) - 1] == '\0',
             "No truncation of infof input");
 
-/* Just over the limit for truncation without newline */
+/* Just over the limit without newline for truncation via '...' */
 memset(input + 2047, 'A', 4);
 Curl_infof(data, "%s", input);
-fail_unless(strlen(result) == 2048, "Truncation of infof input 1");
+fail_unless(strlen(result) == 2051, "Truncation of infof input 1");
 fail_unless(result[sizeof(result) - 1] == '\0', "Truncation of infof input 1");
 
-/* Just over the limit for truncation with newline */
+/* Just over the limit with newline for truncation via '...' */
 memset(input + 2047, 'A', 4);
 memset(input + 2047 + 4, '\n', 1);
 Curl_infof(data, "%s", input);
-fail_unless(strlen(result) == 2048, "Truncation of infof input 2");
+fail_unless(strlen(result) == 2051, "Truncation of infof input 2");
 fail_unless(result[sizeof(result) - 1] == '\0', "Truncation of infof input 2");
 
-/* Way over the limit for truncation with newline */
+/* Way over the limit for truncation via '...' */
 memset(input, '\0', sizeof(input));
 memset(input, 'A', sizeof(input) - 1);
 Curl_infof(data, "%s", input);
-fail_unless(strlen(result) == 2048, "Truncation of infof input 3");
+fail_unless(strlen(result) == 2051, "Truncation of infof input 3");
 fail_unless(result[sizeof(result) - 1] == '\0', "Truncation of infof input 3");
 
 
