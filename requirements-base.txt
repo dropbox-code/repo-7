@@ -343,7 +343,9 @@ six==1.16.0
 slack-sdk==3.17.0
     # via -r requirements-base.in
 smart-open==5.2.1
-    # via pathy
+    # via
+    #   pathy
+    #   spacy
 sniffio==1.2.0
     # via
     #   anyio
@@ -351,7 +353,7 @@ sniffio==1.2.0
     #   httpx
 sortedcontainers==2.4.0
     # via hypothesis
-spacy==3.3.1
+spacy==3.3.3
     # via -r requirements-base.in
 spacy-legacy==3.0.9
     # via spacy
@@ -401,6 +403,8 @@ typing-extensions==4.2.0
     # via
     #   pydantic
     #   schemathesis
+    #   spacy
+    #   starlette
 uritemplate==4.1.1
     # via google-api-python-client
 urllib3==1.26.9
