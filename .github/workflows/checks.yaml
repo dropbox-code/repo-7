@@ -514,7 +514,7 @@ jobs:
         go-version: ${{ env.golang-version }}
     - continue-on-error: true
       name: golangci-lint
-      uses: golangci/golangci-lint-action@v3.7.0
+      uses: golangci/golangci-lint-action@v6.1.1
       with:
         args: --timeout 10m0s
         version: v1.53.1
