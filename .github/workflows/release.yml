@@ -298,21 +298,21 @@ jobs:
         workload_identity_provider: ${{secrets.GCR_WORKLOAD_IDENTITY_PROVIDER}}
     - continue-on-error: true
       name: Log in to EU registry
-      uses: docker/login-action@v2
+      uses: docker/login-action@v3
       with:
         password: ${{ steps.login-gcp.outputs.access_token }}
         registry: us-docker.pkg.dev
         username: oauth2accesstoken
     - continue-on-error: true
       name: Log in to EU registry
-      uses: docker/login-action@v2
+      uses: docker/login-action@v3
       with:
         password: ${{ steps.login-gcp.outputs.access_token }}
         registry: europe-docker.pkg.dev
         username: oauth2accesstoken
     - continue-on-error: true
       name: Log in to Asia registry
-      uses: docker/login-action@v2
+      uses: docker/login-action@v3
       with:
         password: ${{ steps.login-gcp.outputs.access_token }}
         registry: asia-docker.pkg.dev
