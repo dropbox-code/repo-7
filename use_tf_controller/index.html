@@ -9,23 +9,25 @@
       
       
       
+        <link rel="prev" href="../getting_started/">
       
-        <link rel="next" href="getting_started/">
+      
+        <link rel="next" href="../branch_planner/">
       
       
-      <link rel="icon" href="assets/images/favicon.png">
+      <link rel="icon" href="../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.40">
     
     
       
-        <title>Weave GitOps Terraform Controller</title>
+        <title>Use TF-Controller - Weave GitOps Terraform Controller</title>
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.8c3ca2c6.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.8c3ca2c6.min.css">
       
         
-        <link rel="stylesheet" href="assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -44,7 +46,7 @@
       
     
     
-    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -70,7 +72,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#overview" class="md-skip">
+        <a href="#use-tf-controller" class="md-skip">
           Skip to content
         </a>
       
@@ -86,7 +88,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="." title="Weave GitOps Terraform Controller" class="md-header__button md-logo" aria-label="Weave GitOps Terraform Controller" data-md-component="logo">
+    <a href=".." title="Weave GitOps Terraform Controller" class="md-header__button md-logo" aria-label="Weave GitOps Terraform Controller" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -106,7 +108,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Overview
+              Use TF-Controller
             
           </span>
         </div>
@@ -219,7 +221,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="." title="Weave GitOps Terraform Controller" class="md-nav__button md-logo" aria-label="Weave GitOps Terraform Controller" data-md-component="logo">
+    <a href=".." title="Weave GitOps Terraform Controller" class="md-nav__button md-logo" aria-label="Weave GitOps Terraform Controller" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -246,30 +248,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Overview
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="." class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -278,44 +260,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#features" class="md-nav__link">
-    <span class="md-ellipsis">
-      Features
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#support-matrix" class="md-nav__link">
-    <span class="md-ellipsis">
-      Support Matrix
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -327,7 +271,7 @@
   
   
     <li class="md-nav__item">
-      <a href="getting_started/" class="md-nav__link">
+      <a href="../getting_started/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -344,10 +288,19 @@
       
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="use_tf_controller/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -356,6 +309,7 @@
   
 
       </a>
+      
     </li>
   
 
@@ -402,7 +356,7 @@
   
   
     <li class="md-nav__item">
-      <a href="branch_planner/" class="md-nav__link">
+      <a href="../branch_planner/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -423,7 +377,7 @@
   
   
     <li class="md-nav__item">
-      <a href="branch_planner/getting-started/" class="md-nav__link">
+      <a href="../branch_planner/getting-started/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -444,7 +398,7 @@
   
   
     <li class="md-nav__item">
-      <a href="branch_planner/least-required-permissions/" class="md-nav__link">
+      <a href="../branch_planner/least-required-permissions/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -465,7 +419,7 @@
   
   
     <li class="md-nav__item">
-      <a href="branch_planner/tfc-integration/" class="md-nav__link">
+      <a href="../branch_planner/tfc-integration/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -493,7 +447,7 @@
   
   
     <li class="md-nav__item">
-      <a href="how_to/" class="md-nav__link">
+      <a href="../how_to/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -513,7 +467,7 @@
   
   
     <li class="md-nav__item">
-      <a href="References/terraform/" class="md-nav__link">
+      <a href="../References/terraform/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -533,7 +487,7 @@
   
   
     <li class="md-nav__item">
-      <a href="tfctl/" class="md-nav__link">
+      <a href="../tfctl/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -566,32 +520,6 @@
     
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#features" class="md-nav__link">
-    <span class="md-ellipsis">
-      Features
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#support-matrix" class="md-nav__link">
-    <span class="md-ellipsis">
-      Support Matrix
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -608,98 +536,30 @@
   
 
 
-<h1 id="overview">Overview</h1>
-<p>~&gt; <strong>BREAKING NEWS:</strong> The <strong>Technology Preview</strong> of the Branch Planner is now available! <a href="branch_planner/">Learn more</a> or Get started with the <a href="branch_planner/getting-started/">Branch Planner</a>.</p>
-<p>TF-controller is a reliable controller for <a href="https://fluxcd.io">Flux</a> to reconcile Terraform resources
-in the GitOps way.
-With the power of Flux together with Terraform, TF-controller allows you to GitOps-ify infrastructure,
-and application resources, in the Kubernetes and Terraform universe, at your own pace.</p>
-<p>"At your own pace" means you don't need to GitOps-ify everything at once.</p>
-<p>TF-controller offers many GitOps models:</p>
-<ol>
-<li><strong>GitOps Automation Model:</strong> GitOps your Terraform resources from the provision steps to the enforcement steps, like a whole EKS cluster.</li>
-<li><strong>Hybrid GitOps Automation Model:</strong> GitOps parts of your existing infrastructure resources. For example, you have an existing EKS cluster.
-     You can choose to GitOps only its nodegroup, or its security group.</li>
-<li><strong>State Enforcement Model:</strong> You have a TFSTATE file, and you'd like to use GitOps enforce it, without changing anything else.</li>
-<li><strong>Drift Detection Model:</strong> You have a TFSTATE file, and you'd like to use GitOps just for drift detection, so you can decide to do things later when a drift occurs.</li>
-</ol>
-<p>To get started, follow the <a href="getting_started/">getting started</a> guide.</p>
-<h2 id="features">Features</h2>
+<h1 id="use-tf-controller">Use TF-controller</h1>
 <ul>
-<li><strong>Multi-Tenancy</strong>: TF-controller supports multi-tenancy by running Terraform <code>plan</code> and <code>apply</code> inside Runner Pods.
-    When specifying <code>.metadata.namespace</code> and <code>.spec.serviceAccountName</code>, the Runner Pod uses the specified ServiceAccount
-    and runs inside the specified Namespace. These settings enable the soft multi-tenancy model, which can be used within
-    the Flux multi-tenancy setup. <em>This feature is available since v0.9.0.</em></li>
-<li><strong>GitOps Automation for Terraform</strong>: With setting <code>.spec.approvePlan=auto</code>, it allows a <code>Terraform</code> object
-    to be reconciled and act as the representation of your Terraform resources. The TF-controller uses the spec of
-    the <code>Terraform</code> object to perform <code>plan</code>, <code>apply</code> its associated Terraform resources. It then stores
-    the <code>TFSTATE</code> of the applied resources as a <code>Secret</code> inside the Kubernetes cluster. After <code>.spec.interval</code> passes,
-    the controller performs drift detection to check if there is a drift occurred between your live system,
-    and your Terraform resources. If a drift occurs, the plan to fix that drift will be generated and applied automatically.
-    <em>This feature is available since v0.3.0.</em></li>
-<li><strong>Drift detection</strong>: This feature is a part of the GitOps automation feature. The controller detects and fixes drift
-    for your infrastructures, based on the Terraform resources and their <code>TFSTATE</code>. <em>This feature is available since v0.5.0.</em><ul>
-<li>Drift detection is enabled by default. You can use the field <code>.spec.disableDriftDetection</code> to disable this behaviour.
-  <em>This feature is available since v0.7.0.</em></li>
-<li>The Drift detection only mode, without plan or apply steps, allows you to perform read-only drift detection.
-  <em>This feature is available since v0.8.0.</em></li>
+<li><a href="to_provision_resources_and_auto_approve/">Use TF-controller to provision resources and <strong>auto approve</strong></a></li>
+<li><a href="to_plan_and_manually_apply_Terraform_resources/">Use TF-controller to <strong>plan and manually apply</strong> Terraform resources</a></li>
+<li><a href="to_provision_resources_and_obtain_outputs/">Use TF-controller to provision resources and <strong>obtain outputs</strong></a></li>
+<li><a href="to_detect_drifts_only_without_plan_or_apply/">Use TF-controller to <strong>detect drifts only</strong> without plan or apply</a></li>
+<li><a href="with_drift_detection_disabled/">Use TF-controller with <strong>drift detection disabled</strong></a></li>
+<li><a href="with_AWS_EKS_IRSA/">Use TF-controller with <strong>AWS EKS IRSA</strong></a></li>
+<li><a href="to_set_variables_for_Terraform_resources/">Use TF-controller to <strong>set variables</strong> for Terraform resources</a></li>
+<li><a href="with_a_custom_backend/">Use TF-controller with a <strong>custom backend</strong></a></li>
+<li><a href="with_an_OCI_Artifact_as_Source/">Use TF-controller with an <strong>OCI Artifact as Source</strong></a></li>
+<li><a href="to_provision_Terraform_resources_that_are_required_health_checks/">Use TF-controller to provision Terraform resources that are required <strong>health checks</strong></a></li>
+<li><a href="to_provision_resources_and_destroy_them_when_the_Terraform_object_gets_deleted/">Use TF-controller to provision resources and <strong>destroy them when the Terraform object gets deleted</strong></a></li>
+<li><a href="to_force_unlock_Terraform_states/">Use TF-controller to <strong>force unlock</strong> Terraform states</a></li>
+<li><a href="with_tf_runner_logging/">Use TF-controller with Terraform Runners enabled via Env Variables</a></li>
+<li><a href="to_provision_resources_with_customized_Runner_Pods/">Use TF-controller to provision resources with <strong>customized Runner Pods</strong></a></li>
+<li><a href="with_Terraform_Enterprise/">Use TF-controller with <strong>Terraform Enterprise</strong></a></li>
+<li><a href="with_primitive_modules/">Use TF-controller with <strong>primitive modules</strong></a></li>
+<li><a href="with_GitOps_dependency_management/">Use TF-controller with <strong>GitOps dependency management</strong></a></li>
+<li><a href="with_the_ready_to_use_AWS_package/">Use TF-controller with <strong>the ready-to-use AWS package</strong></a></li>
+<li><a href="with_plan_only_mode/">User TF-controller with <strong>plan-only mode</strong></a></li>
+<li><a href="with_external_webhooks/">Use TF-controller with <strong>external webhooks</strong></a></li>
+<li><a href="with_tf_runner_exposed_using_hostname_subdomain/">Use TF-controller with Terraform Runners <strong>exposed via hostname/subdomain</strong></a></li>
 </ul>
-</li>
-<li><strong>Plan and Manual Approve</strong>: This feature allows you to separate the <code>plan</code>, out of the <code>apply</code> step, just like
-    the Terraform workflow you are familiar with. A good thing about this is that it is done in a GitOps way. When a plan
-    is generated, the controller shows you a message like <strong>'set approvePlan: "plan-main-123" to apply this plan.'</strong>.
-    You make change to the field <code>.spec.approvePlan</code>, commit and push to tell the TF-controller to apply the plan for you.
-    With this GitOps workflow, you can optionally create and push this change to a new branch for your team member to
-    review and approve too. <em>This feature is available since v0.6.0.</em></li>
-<li><strong>First-class YAML-based Terraform</strong>: The <code>Terraform</code> object in v0.13.0+ allows you to better configure your 
-    Terraform resources via YAMLs, but without introducing any extra CRDs to your cluster. Together with a new generator
-    called <strong>Tofu-Jet</strong>, we'll now be able to ship pre-generated primitive Terraform modules for all major cloud providers.
-    A primitive Terraform module is a module that only contains a single primitive resource, like <code>aws_iam_role</code>, or <code>aws_iam_policy</code>.
-    With this concept, we would be able to use Terraform without writing Terraform codes, and make it more GitOps-friendly at the same time. 
-    <em>This feature is available since v0.13.0.</em></li>
-<li><strong>GitOps Dependency for Terraform</strong>: The <code>Terraform</code> object in v0.13.0+ allows you to specify a list of <code>Terraform</code> objects
-    that it depends on. The controller will wait for the dependencies to be ready before it starts to reconcile the
-    <code>Terraform</code> object. This allows you to create a dependency graph of your Terraform modules, and make sure
-    the modules are applied in the correct order. Please use <code>.spec.retryInterval</code> (a small value like <code>20s</code>) to control 
-    the retry interval when using this feature. <em>This feature is available since v0.13.0.</em></li>
-</ul>
-<h2 id="support-matrix">Support Matrix</h2>
-<table>
-<thead>
-<tr>
-<th style="text-align: center;">Version</th>
-<th style="text-align: center;">Terraform</th>
-<th style="text-align: center;">Source Controller</th>
-<th style="text-align: center;">Flux v2</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: center;">v0.15</td>
-<td style="text-align: center;">v1.3.9</td>
-<td style="text-align: center;">v1.0.x</td>
-<td style="text-align: center;">v2.0.x</td>
-</tr>
-<tr>
-<td style="text-align: center;">v0.14</td>
-<td style="text-align: center;">v1.3.9</td>
-<td style="text-align: center;">v0.31.0</td>
-<td style="text-align: center;">v0.41.x</td>
-</tr>
-<tr>
-<td style="text-align: center;">v0.13</td>
-<td style="text-align: center;">v1.3.1</td>
-<td style="text-align: center;">v0.31.0</td>
-<td style="text-align: center;">v0.36.x</td>
-</tr>
-<tr>
-<td style="text-align: center;">v0.12</td>
-<td style="text-align: center;">v1.1.9</td>
-<td style="text-align: center;">v0.26.1</td>
-<td style="text-align: center;">v0.32.x</td>
-</tr>
-</tbody>
-</table>
 
 
 
@@ -746,10 +606,10 @@ and application resources, in the Kubernetes and Terraform universe, at your own
     </div>
     
     
-    <script id="__config" type="application/json">{"base": ".", "features": ["content.code.annotate", "content.code.copy"], "search": "assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["content.code.annotate", "content.code.copy"], "search": "../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="assets/javascripts/bundle.525ec568.min.js"></script>
+      <script src="../assets/javascripts/bundle.525ec568.min.js"></script>
       
     
   </body>
