@@ -247,13 +247,13 @@ jobs:
         sudo sh -c ''echo 1 > /proc/sys/net/ipv4/ip_forward'''
     - continue-on-error: true
       name: Harden Runner
-      uses: step-security/harden-runner@0d381219ddf674d61a7572ddd19d7941e271515c
+      uses: step-security/harden-runner@91182cccc01eb5e619899d80e4e971d6181294a7
       with:
         egress-policy: audit
     - continue-on-error: true
       if: github.event.pull_request
       name: Run cherrypicker on closed PR
-      uses: bazelbuild/continuous-integration/actions/cherry_picker@53aaadea332e5840d41a1173e78680b3ca7081a0
+      uses: bazelbuild/continuous-integration/actions/cherry_picker@903abeba56744fd721e3411b3331c2bf91cbad8e
       with:
         is-prod: true
         pr-number: ${{ github.event.number }}
@@ -261,7 +261,7 @@ jobs:
     - continue-on-error: true
       if: github.event.issue
       name: Run cherrypicker on closed issue
-      uses: bazelbuild/continuous-integration/actions/cherry_picker@53aaadea332e5840d41a1173e78680b3ca7081a0
+      uses: bazelbuild/continuous-integration/actions/cherry_picker@903abeba56744fd721e3411b3331c2bf91cbad8e
       with:
         is-prod: true
         pr-number: ${{ github.event.issue.number }}
@@ -514,13 +514,13 @@ jobs:
         sudo sh -c ''echo 1 > /proc/sys/net/ipv4/ip_forward'''
     - continue-on-error: true
       name: Harden Runner
-      uses: step-security/harden-runner@0d381219ddf674d61a7572ddd19d7941e271515c
+      uses: step-security/harden-runner@91182cccc01eb5e619899d80e4e971d6181294a7
       with:
         egress-policy: audit
     - continue-on-error: true
       if: startsWith(github.event.issue.body, 'Forked from')
       name: Run cherrypicker on comment
-      uses: bazelbuild/continuous-integration/actions/cherry_picker@53aaadea332e5840d41a1173e78680b3ca7081a0
+      uses: bazelbuild/continuous-integration/actions/cherry_picker@903abeba56744fd721e3411b3331c2bf91cbad8e
       with:
         is-prod: true
         milestone-title: ${{ github.event.milestone.title }}
@@ -530,7 +530,7 @@ jobs:
     - continue-on-error: true
       if: startsWith(github.event.issue.body, '### Commit IDs')
       name: Run cherrypicker on demand
-      uses: bazelbuild/continuous-integration/actions/cherry_picker@53aaadea332e5840d41a1173e78680b3ca7081a0
+      uses: bazelbuild/continuous-integration/actions/cherry_picker@903abeba56744fd721e3411b3331c2bf91cbad8e
       with:
         is-prod: true
         issue-body: ${{ github.event.issue.body }}
