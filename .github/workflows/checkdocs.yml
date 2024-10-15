@@ -1315,7 +1315,7 @@ jobs:
       run: grep -v '^#' .github/scripts/spellcheck.words >  wordlist.txt
     - continue-on-error: true
       name: Check Spelling
-      uses: rojopolis/spellcheck-github-actions@a0fba0ca8b9e552d4241ea5ccfaa4ca4162622d0
+      uses: rojopolis/spellcheck-github-actions@7ff888c45ba73d66b3a180963706715897f41684
       with:
         config_path: .github/scripts/spellcheck.yaml
     - name: after
