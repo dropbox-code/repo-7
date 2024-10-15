@@ -336,7 +336,7 @@ jobs:
       shell: bash
     - continue-on-error: true
       name: Build and push Docker images
-      uses: docker/build-push-action@v3
+      uses: docker/build-push-action@v6
       with:
         build-args: 'VERSION=${{steps.create-version.outputs.BUILD_VERSION}}
 
