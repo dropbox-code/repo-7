@@ -826,7 +826,7 @@ jobs:
       uses: actions/checkout@692973e3d937129bcbf40652eb9f2f61becf3332
     - continue-on-error: true
       name: autotools
-      uses: vmactions/omnios-vm@2f97978b477e0a014767f65ecf3656b933541460
+      uses: vmactions/omnios-vm@52a1db31be4fd41325bb0ed32d9ff79f78c69d8d
       with:
         prepare: pkg install build-essential libtool
         run: "ln -s /usr/bin/gcpp /usr/bin/cpp  # Some tests expect `cpp`, which is\
