@@ -276,7 +276,7 @@ jobs:
         cache-name: cache-quictls-no-deprecated
       id: cache-quictls-no-deprecated
       name: cache quictls
-      uses: actions/cache@0c45773b623bea8c8e75f6c82b208c3cf94ea4f9
+      uses: actions/cache@3624ceb22c1c5a301c8db4169662070a689d9ea8
       with:
         fail-on-cache-miss: true
         key: ${{ runner.os }}-http3-build-${{ env.cache-name }}-${{ env.quictls-version
@@ -287,7 +287,7 @@ jobs:
         cache-name: cache-gnutls
       id: cache-gnutls
       name: cache gnutls
-      uses: actions/cache@0c45773b623bea8c8e75f6c82b208c3cf94ea4f9
+      uses: actions/cache@3624ceb22c1c5a301c8db4169662070a689d9ea8
       with:
         fail-on-cache-miss: true
         key: ${{ runner.os }}-http3-build-${{ env.cache-name }}-${{ env.gnutls-version
@@ -299,7 +299,7 @@ jobs:
         wolfssl-version: ${{ needs.setup.outputs.wolfssl-version }}
       id: cache-wolfssl
       name: cache wolfssl
-      uses: actions/cache@0c45773b623bea8c8e75f6c82b208c3cf94ea4f9
+      uses: actions/cache@3624ceb22c1c5a301c8db4169662070a689d9ea8
       with:
         fail-on-cache-miss: true
         key: ${{ runner.os }}-http3-build-${{ env.cache-name }}-${{ env.wolfssl-version
@@ -310,7 +310,7 @@ jobs:
         cache-name: cache-nghttp3
       id: cache-nghttp3
       name: cache nghttp3
-      uses: actions/cache@0c45773b623bea8c8e75f6c82b208c3cf94ea4f9
+      uses: actions/cache@3624ceb22c1c5a301c8db4169662070a689d9ea8
       with:
         fail-on-cache-miss: true
         key: ${{ runner.os }}-http3-build-${{ env.cache-name }}-${{ env.nghttp3-version
@@ -321,7 +321,7 @@ jobs:
         cache-name: cache-ngtcp2
       id: cache-ngtcp2
       name: cache ngtcp2
-      uses: actions/cache@0c45773b623bea8c8e75f6c82b208c3cf94ea4f9
+      uses: actions/cache@3624ceb22c1c5a301c8db4169662070a689d9ea8
       with:
         fail-on-cache-miss: true
         key: ${{ runner.os }}-http3-build-${{ env.cache-name }}-${{ env.ngtcp2-version
@@ -332,7 +332,7 @@ jobs:
         cache-name: cache-nghttp2
       id: cache-nghttp2
       name: cache nghttp2
-      uses: actions/cache@0c45773b623bea8c8e75f6c82b208c3cf94ea4f9
+      uses: actions/cache@3624ceb22c1c5a301c8db4169662070a689d9ea8
       with:
         fail-on-cache-miss: true
         key: ${{ runner.os }}-http3-build-${{ env.cache-name }}-${{ env.nghttp2-version
@@ -344,7 +344,7 @@ jobs:
       id: cache-openssl3
       if: matrix.build.name == 'openssl-quic'
       name: cache openssl3
-      uses: actions/cache@0c45773b623bea8c8e75f6c82b208c3cf94ea4f9
+      uses: actions/cache@3624ceb22c1c5a301c8db4169662070a689d9ea8
       with:
         key: ${{ runner.os }}-http3-build-${{ env.cache-name }}-${{ env.openssl3-version
           }}
@@ -370,7 +370,7 @@ jobs:
       id: cache-quiche
       if: matrix.build.name == 'quiche'
       name: cache quiche
-      uses: actions/cache@0c45773b623bea8c8e75f6c82b208c3cf94ea4f9
+      uses: actions/cache@3624ceb22c1c5a301c8db4169662070a689d9ea8
       with:
         key: ${{ runner.os }}-http3-build-${{ env.cache-name }}-quiche-${{ env.quiche-version
           }}
@@ -416,7 +416,7 @@ jobs:
         cache-name: cache-mod_h2
       id: cache-mod_h2
       name: cache mod_h2
-      uses: actions/cache@0c45773b623bea8c8e75f6c82b208c3cf94ea4f9
+      uses: actions/cache@3624ceb22c1c5a301c8db4169662070a689d9ea8
       with:
         key: ${{ runner.os }}-http3-build-${{ env.cache-name }}-${{ env.mod_h2-version
           }}
@@ -757,7 +757,7 @@ jobs:
         cache-name: cache-quictls-no-deprecated
       id: cache-quictls-no-deprecated
       name: cache quictls
-      uses: actions/cache@0c45773b623bea8c8e75f6c82b208c3cf94ea4f9
+      uses: actions/cache@3624ceb22c1c5a301c8db4169662070a689d9ea8
       with:
         key: ${{ runner.os }}-http3-build-${{ env.cache-name }}-${{ env.quictls-version
           }}
@@ -767,7 +767,7 @@ jobs:
         cache-name: cache-gnutls
       id: cache-gnutls
       name: cache gnutls
-      uses: actions/cache@0c45773b623bea8c8e75f6c82b208c3cf94ea4f9
+      uses: actions/cache@3624ceb22c1c5a301c8db4169662070a689d9ea8
       with:
         key: ${{ runner.os }}-http3-build-${{ env.cache-name }}-${{ env.gnutls-version
           }}
@@ -778,7 +778,7 @@ jobs:
         wolfssl-version: ${{ needs.setup.outputs.wolfssl-version }}
       id: cache-wolfssl
       name: cache wolfssl
-      uses: actions/cache@0c45773b623bea8c8e75f6c82b208c3cf94ea4f9
+      uses: actions/cache@3624ceb22c1c5a301c8db4169662070a689d9ea8
       with:
         key: ${{ runner.os }}-http3-build-${{ env.cache-name }}-${{ env.wolfssl-version
           }}
@@ -788,7 +788,7 @@ jobs:
         cache-name: cache-nghttp3
       id: cache-nghttp3
       name: cache nghttp3
-      uses: actions/cache@0c45773b623bea8c8e75f6c82b208c3cf94ea4f9
+      uses: actions/cache@3624ceb22c1c5a301c8db4169662070a689d9ea8
       with:
         key: ${{ runner.os }}-http3-build-${{ env.cache-name }}-${{ env.nghttp3-version
           }}
@@ -798,7 +798,7 @@ jobs:
         cache-name: cache-ngtcp2
       id: cache-ngtcp2
       name: cache ngtcp2
-      uses: actions/cache@0c45773b623bea8c8e75f6c82b208c3cf94ea4f9
+      uses: actions/cache@3624ceb22c1c5a301c8db4169662070a689d9ea8
       with:
         key: ${{ runner.os }}-http3-build-${{ env.cache-name }}-${{ env.ngtcp2-version
           }}
@@ -808,7 +808,7 @@ jobs:
         cache-name: cache-nghttp2
       id: cache-nghttp2
       name: cache nghttp2
-      uses: actions/cache@0c45773b623bea8c8e75f6c82b208c3cf94ea4f9
+      uses: actions/cache@3624ceb22c1c5a301c8db4169662070a689d9ea8
       with:
         key: ${{ runner.os }}-http3-build-${{ env.cache-name }}-${{ env.nghttp2-version
           }}
