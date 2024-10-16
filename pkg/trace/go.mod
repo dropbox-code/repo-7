@@ -34,7 +34,7 @@ require (
 	go.opentelemetry.io/collector/semconv v0.78.1
 	go.uber.org/atomic v1.11.0
 	golang.org/x/sys v0.8.0
-	golang.org/x/time v0.3.0
+	golang.org/x/time v0.7.0
 	google.golang.org/grpc v1.55.0
 	google.golang.org/protobuf v1.30.0
 	k8s.io/apimachinery v0.25.5
