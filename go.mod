@@ -43,7 +43,7 @@ require (
 	code.cloudfoundry.org/lager v2.0.0+incompatible
 	github.com/CycloneDX/cyclonedx-go v0.7.1
 	github.com/DataDog/agent-payload/v5 v5.0.85
-	github.com/DataDog/appsec-internal-go v0.0.0-20230215162203-5149228be86a
+	github.com/DataDog/appsec-internal-go v1.8.0
 	github.com/DataDog/datadog-agent/pkg/gohai v0.46.0-rc.2
 	github.com/DataDog/datadog-agent/pkg/obfuscate v0.46.0-rc.2
 	github.com/DataDog/datadog-agent/pkg/remoteconfig/state v0.46.0-rc.2
