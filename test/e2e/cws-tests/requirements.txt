@@ -1,4 +1,4 @@
-kubernetes==26.1.0
+kubernetes==31.0.0
 datadog-api-client==2.13.1
 pyaml==23.5.9
 docker==6.1.3
