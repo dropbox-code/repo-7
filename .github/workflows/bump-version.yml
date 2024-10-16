@@ -323,7 +323,7 @@ jobs:
         ref: main
         repository: grafana/grafana-github-actions
     - continue-on-error: true
-      uses: actions/setup-node@v2.5.1
+      uses: actions/setup-node@v4.0.4
       with:
         node-version: '16'
     - continue-on-error: true
