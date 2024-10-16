@@ -278,7 +278,7 @@ jobs:
         AWS_ACCESS_KEY_ID: ${{ secrets.SERVERLESS_AWS_ACCESS_KEY_ID }}
         AWS_SECRET_ACCESS_KEY: ${{ secrets.SERVERLESS_AWS_SECRET_ACCESS_KEY }}
       name: Run tests if AWS credentials are available
-      uses: nick-fields/retry@v2
+      uses: nick-fields/retry@v3
       with:
         command: 'cd go/src/github.com/DataDog/datadog-agent
 
