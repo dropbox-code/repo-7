@@ -133,7 +133,7 @@ require (
 	github.com/hectane/go-acl v0.0.0-20190604041725-da78bae5fc95
 	github.com/iceber/iouring-go v0.0.0-20220609112130-b1dc8dd9fbfd
 	github.com/imdario/mergo v0.3.15
-	github.com/invopop/jsonschema v0.7.0
+	github.com/invopop/jsonschema v0.12.0
 	github.com/itchyny/gojq v0.12.13
 	github.com/json-iterator/go v1.1.12
 	github.com/kardianos/osext v0.0.0-20190222173326-2bc1f35cddc0
@@ -387,7 +387,6 @@ require (
 	github.com/hashicorp/hcl v1.0.0 // indirect
 	github.com/hashicorp/serf v0.10.1 // indirect
 	github.com/huandu/xstrings v1.3.3 // indirect
-	github.com/iancoleman/orderedmap v0.0.0-20190318233801-ac98e3ecb4b0 // indirect
 	github.com/ianlancetaylor/cgosymbolizer v0.0.0-20221208003206-eaf69f594683
 	github.com/ianlancetaylor/demangle v0.0.0-20200824232613-28f6c0f3b639 // indirect
 	github.com/in-toto/in-toto-golang v0.8.0 // indirect
@@ -575,6 +574,8 @@ require (
 )
 
 require (
+	github.com/bahlo/generic-list-go v0.2.0 // indirect
+	github.com/buger/jsonparser v1.1.1 // indirect
 	github.com/cloudflare/circl v1.1.0 // indirect
 	github.com/godror/knownpb v0.1.0 // indirect
 	github.com/google/s2a-go v0.1.2 // indirect
@@ -583,6 +584,7 @@ require (
 	github.com/rs/zerolog v1.29.0 // indirect
 	github.com/sigstore/rekor v1.0.1 // indirect
 	github.com/spaolacci/murmur3 v1.1.0 // indirect
+	github.com/wk8/go-ordered-map/v2 v2.1.8 // indirect
 	go4.org/intern v0.0.0-20211027215823-ae77deb06f29 // indirect
 	go4.org/unsafe/assume-no-moving-gc v0.0.0-20220617031537-928513b29760 // indirect
 	gopkg.in/ini.v1 v1.67.0 // indirect
