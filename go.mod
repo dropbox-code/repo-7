@@ -56,7 +56,7 @@ require (
 	github.com/DataDog/datadog-go/v5 v5.1.1
 	github.com/DataDog/datadog-operator v1.0.3
 	github.com/DataDog/ebpf-manager v0.2.8-0.20230607183918-2e1ebd69e14b
-	github.com/DataDog/go-libddwaf v1.0.0
+	github.com/DataDog/go-libddwaf v1.7.0
 	github.com/DataDog/go-tuf v0.3.0--fix-localmeta-fork
 	github.com/DataDog/gopsutil v1.2.2
 	github.com/DataDog/nikos v1.12.0
@@ -213,7 +213,7 @@ require (
 	golang.org/x/exp v0.0.0-20230522175609-2e198f4a06a1
 	golang.org/x/net v0.11.0
 	golang.org/x/sync v0.3.0
-	golang.org/x/sys v0.9.0
+	golang.org/x/sys v0.13.0
 	golang.org/x/text v0.10.0
 	golang.org/x/time v0.3.0
 	golang.org/x/tools v0.10.0
@@ -576,6 +576,7 @@ require (
 
 require (
 	github.com/cloudflare/circl v1.1.0 // indirect
+	github.com/ebitengine/purego v0.5.0 // indirect
 	github.com/godror/knownpb v0.1.0 // indirect
 	github.com/google/s2a-go v0.1.2 // indirect
 	github.com/kr/text v0.2.0 // indirect
