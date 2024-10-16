@@ -53,7 +53,7 @@ require (
 	github.com/DataDog/datadog-agent/pkg/util/log v0.46.0-rc.2
 	github.com/DataDog/datadog-agent/pkg/util/pointer v0.46.0-rc.2
 	github.com/DataDog/datadog-agent/pkg/util/scrubber v0.46.0-rc.2
-	github.com/DataDog/datadog-go/v5 v5.1.1
+	github.com/DataDog/datadog-go/v5 v5.5.0
 	github.com/DataDog/datadog-operator v1.0.3
 	github.com/DataDog/ebpf-manager v0.2.8-0.20230607183918-2e1ebd69e14b
 	github.com/DataDog/go-libddwaf v1.0.0
