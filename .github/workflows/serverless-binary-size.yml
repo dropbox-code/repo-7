@@ -368,7 +368,7 @@ jobs:
     - continue-on-error: true
       if: steps.compare.outputs.diff > env.SIZE_ALLOWANCE
       name: Post comment
-      uses: marocchino/sticky-pull-request-comment@v2.5.0
+      uses: marocchino/sticky-pull-request-comment@v2.9.0
       with:
         hide_and_recreate: true
         hide_classify: RESOLVED
