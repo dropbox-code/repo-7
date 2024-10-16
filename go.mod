@@ -15,7 +15,7 @@ replace github.com/russellhaering/goxmldsig@v1.1.0 => github.com/russellhaering/
 
 require (
 	cloud.google.com/go/storage v1.18.2
-	cuelang.org/go v0.4.0
+	cuelang.org/go v0.10.0
 	github.com/Azure/azure-sdk-for-go v59.3.0+incompatible
 	github.com/Azure/go-autorest/autorest v0.11.22
 	github.com/BurntSushi/toml v0.3.1
@@ -45,8 +45,8 @@ require (
 	github.com/gogo/protobuf v1.3.2
 	github.com/golang/mock v1.6.0
 	github.com/golang/snappy v0.0.4
-	github.com/google/go-cmp v0.5.7
-	github.com/google/uuid v1.3.0
+	github.com/google/go-cmp v0.6.0
+	github.com/google/uuid v1.6.0
 	github.com/google/wire v0.5.0
 	github.com/gorilla/websocket v1.4.2
 	github.com/gosimple/slug v1.9.0
@@ -65,7 +65,7 @@ require (
 	github.com/json-iterator/go v1.1.12
 	github.com/jung-kurt/gofpdf v1.16.2
 	github.com/laher/mergefs v0.1.1
-	github.com/lib/pq v1.10.4
+	github.com/lib/pq v1.10.7
 	github.com/linkedin/goavro/v2 v2.10.0
 	github.com/m3db/prometheus_remote_client_golang v0.4.4
 	github.com/magefile/mage v1.12.1
@@ -86,14 +86,14 @@ require (
 	github.com/robfig/cron v0.0.0-20180505203441-b41be1df6967
 	github.com/robfig/cron/v3 v3.0.1
 	github.com/russellhaering/goxmldsig v1.1.1
-	github.com/stretchr/testify v1.7.0
+	github.com/stretchr/testify v1.9.0
 	github.com/teris-io/shortid v0.0.0-20171029131806-771a37caa5cf
 	github.com/ua-parser/uap-go v0.0.0-20211112212520-00c877edfe0f
 	github.com/uber/jaeger-client-go v2.29.1+incompatible
 	github.com/unknwon/com v1.0.1
 	github.com/urfave/cli/v2 v2.3.0
 	github.com/vectordotdev/go-datemath v0.1.1-0.20220323213446-f3954d0b18ae
-	github.com/weaveworks/common v0.0.0-20210913144402-035033b78a78
+	github.com/weaveworks/common v0.0.0-20210913144402-035033b78a78 // indirect
 	github.com/xorcare/pointer v1.1.0
 	github.com/yudai/gojsondiff v1.0.0
 	go.opentelemetry.io/collector v0.31.0
@@ -102,13 +102,13 @@ require (
 	go.opentelemetry.io/otel/exporters/jaeger v1.0.0
 	go.opentelemetry.io/otel/sdk v1.0.0
 	go.opentelemetry.io/otel/trace v1.2.0
-	golang.org/x/crypto v0.0.0-20211117183948-ae814b36b871
+	golang.org/x/crypto v0.26.0
 	golang.org/x/exp v0.0.0-20210220032938-85be41e4509f
-	golang.org/x/net v0.0.0-20211118161319-6a13c67c3ce4
-	golang.org/x/oauth2 v0.0.0-20211104180415-d3ed0bb246c8
-	golang.org/x/sync v0.0.0-20210220032951-036812b2e83c
+	golang.org/x/net v0.28.0 // indirect
+	golang.org/x/oauth2 v0.22.0
+	golang.org/x/sync v0.8.0
 	golang.org/x/time v0.0.0-20211116232009-f0f3c7e86c11
-	golang.org/x/tools v0.1.9
+	golang.org/x/tools v0.24.0
 	gonum.org/v1/gonum v0.11.0
 	google.golang.org/api v0.60.0
 	google.golang.org/grpc v1.42.0
@@ -119,7 +119,7 @@ require (
 	gopkg.in/mail.v2 v2.3.1
 	gopkg.in/square/go-jose.v2 v2.5.1
 	gopkg.in/yaml.v2 v2.4.0
-	gopkg.in/yaml.v3 v3.0.0-20210107192922-496545a6307b
+	gopkg.in/yaml.v3 v3.0.1
 	xorm.io/builder v0.3.6
 	xorm.io/core v0.7.3
 	xorm.io/xorm v0.8.2
@@ -150,7 +150,6 @@ require (
 	github.com/centrifugal/protocol v0.7.6 // indirect
 	github.com/cespare/xxhash/v2 v2.1.2 // indirect
 	github.com/cheekybits/genny v1.0.0 // indirect
-	github.com/cockroachdb/apd/v2 v2.0.2 // indirect
 	github.com/cpuguy83/go-md2man/v2 v2.0.0 // indirect
 	github.com/deepmap/oapi-codegen v1.8.2 // indirect
 	github.com/dennwc/varint v1.0.0 // indirect
@@ -159,7 +158,7 @@ require (
 	github.com/docker/go-units v0.4.0 // indirect
 	github.com/dustin/go-humanize v1.0.0 // indirect
 	github.com/edsrzf/mmap-go v1.0.0 // indirect
-	github.com/emicklei/proto v1.6.15 // indirect
+	github.com/emicklei/proto v1.13.2 // indirect
 	github.com/felixge/httpsnoop v1.0.2 // indirect
 	github.com/go-kit/log v0.1.0
 	github.com/go-logfmt/logfmt v0.5.1 // indirect
@@ -176,7 +175,6 @@ require (
 	github.com/gogo/status v1.1.0 // indirect
 	github.com/golang-jwt/jwt/v4 v4.2.0 // indirect
 	github.com/golang-sql/civil v0.0.0-20190719163853-cb61b32ac6fe // indirect
-	github.com/golang/glog v0.0.0-20160126235308-23def4e6c14b // indirect
 	github.com/golang/groupcache v0.0.0-20210331224755-41bb18bfe9da // indirect
 	github.com/golang/protobuf v1.5.2 // indirect
 	github.com/gomodule/redigo v2.0.0+incompatible // indirect
@@ -210,7 +208,6 @@ require (
 	github.com/mna/redisc v1.3.2 // indirect
 	github.com/modern-go/concurrent v0.0.0-20180306012644-bacd9c7ef1dd // indirect
 	github.com/modern-go/reflect2 v1.0.2 // indirect
-	github.com/mpvl/unique v0.0.0-20150818121801-cbe035fff7de // indirect
 	github.com/oklog/run v1.1.0 // indirect
 	github.com/oklog/ulid v1.3.1 // indirect
 	github.com/olekukonko/tablewriter v0.0.5 // indirect
@@ -221,7 +218,7 @@ require (
 	github.com/prometheus/exporter-toolkit v0.7.0 // indirect
 	github.com/prometheus/node_exporter v1.0.0-rc.0.0.20200428091818-01054558c289 // indirect
 	github.com/prometheus/procfs v0.7.3 // indirect
-	github.com/protocolbuffers/txtpbfmt v0.0.0-20201118171849-f6a6b3f636fc // indirect
+	github.com/protocolbuffers/txtpbfmt v0.0.0-20230328191034-3462fbc510c0 // indirect
 	github.com/rainycape/unidecode v0.0.0-20150907023854-cb7f23ec59be // indirect
 	github.com/rs/cors v1.8.0 // indirect
 	github.com/russross/blackfriday/v2 v2.0.1 // indirect
@@ -233,7 +230,7 @@ require (
 	github.com/shurcooL/sanitized_anchor_name v1.0.0 // indirect
 	github.com/shurcooL/vfsgen v0.0.0-20200824052919-0d455de96546 // indirect
 	github.com/sirupsen/logrus v1.8.1 // indirect
-	github.com/stretchr/objx v0.2.0 // indirect
+	github.com/stretchr/objx v0.5.2 // indirect
 	github.com/uber/jaeger-lib v2.4.1+incompatible // indirect
 	github.com/valyala/bytebufferpool v1.0.0 // indirect
 	github.com/weaveworks/promrus v1.2.0 // indirect
@@ -242,8 +239,8 @@ require (
 	go.opencensus.io v0.23.0 // indirect
 	go.uber.org/atomic v1.9.0
 	go.uber.org/goleak v1.1.11-0.20210813005559-691160354723 // indirect
-	golang.org/x/sys v0.0.0-20220114195835-da31bd327af9 // indirect
-	golang.org/x/text v0.3.7 // indirect
+	golang.org/x/sys v0.23.0 // indirect
+	golang.org/x/text v0.17.0 // indirect
 	golang.org/x/xerrors v0.0.0-20200804184101-5ec99f83aff1 // indirect
 	google.golang.org/appengine v1.6.7 // indirect
 	google.golang.org/genproto v0.0.0-20211118181313-81c1377c94b1
@@ -252,16 +249,17 @@ require (
 
 require (
 	cloud.google.com/go/kms v1.1.0
-	github.com/unrolled/secure v1.0.8
 	github.com/Azure/azure-sdk-for-go/sdk/azidentity v0.13.2
 	github.com/Azure/azure-sdk-for-go/sdk/keyvault/azkeys v0.4.0
 	github.com/Azure/go-autorest/autorest/adal v0.9.17
 	github.com/golang-migrate/migrate/v4 v4.7.0
 	github.com/grafana/dskit v0.0.0-20211011144203-3a88ec0b675f
+	github.com/unrolled/secure v1.0.8
 	gocloud.dev v0.24.0
 )
 
 require (
+	cuelabs.dev/go/oci/ociregistry v0.0.0-20240807094312-a32ad29eed79 // indirect
 	github.com/Azure/azure-sdk-for-go/sdk/azcore v0.22.0 // indirect
 	github.com/Azure/azure-sdk-for-go/sdk/keyvault/internal v0.2.1 // indirect
 	github.com/AzureAD/microsoft-authentication-library-for-go v0.4.0 // indirect
@@ -269,6 +267,7 @@ require (
 	github.com/chromedp/cdproto v0.0.0-20220208224320-6efb837e6bc2 // indirect
 	github.com/cncf/udpa/go v0.0.0-20210930031921-04548b0d99d4 // indirect
 	github.com/cncf/xds/go v0.0.0-20211011173535-cb28da3451f1 // indirect
+	github.com/cockroachdb/apd/v3 v3.2.1 // indirect
 	github.com/containerd/containerd v1.5.9 // indirect
 	github.com/elazarl/goproxy v0.0.0-20220115173737-adb46da277ac // indirect
 	github.com/envoyproxy/go-control-plane v0.10.1 // indirect
@@ -279,9 +278,14 @@ require (
 	github.com/imdario/mergo v0.3.12 // indirect
 	github.com/klauspost/compress v1.13.6 // indirect
 	github.com/kylelemons/godebug v1.1.0 // indirect
-	github.com/opencontainers/image-spec v1.0.2 // indirect
+	github.com/mitchellh/go-wordwrap v1.0.1 // indirect
+	github.com/opencontainers/go-digest v1.0.0 // indirect
+	github.com/opencontainers/image-spec v1.1.0 // indirect
+	github.com/pelletier/go-toml/v2 v2.2.2 // indirect
 	github.com/pierrec/lz4/v4 v4.1.8 // indirect
+	github.com/rogpeppe/go-internal v1.12.1-0.20240709150035-ccf4b4329d21 // indirect
 	github.com/segmentio/asm v1.1.1 // indirect
+	golang.org/x/mod v0.20.0 // indirect
 )
 
 // Use fork of crewjam/saml with fixes for some issues until changes get merged into upstream
