@@ -251,7 +251,7 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       name: Check Changelog
-      uses: Zomzog/changelog-checker@v1.0.0
+      uses: Zomzog/changelog-checker@v1.3.0
       with:
         fileName: CHANGELOG.md
     - name: after
