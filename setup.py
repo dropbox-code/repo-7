@@ -35,7 +35,7 @@ setup(
         'MarkupSafe>=2.1.3',
         'mistune==0.8.4',
         'monotonic>=1.6',
-        'phonenumbers~=8.12.12',
+        'phonenumbers>=8.12.12,<8.14.0',
         'pypdf >= 3.15.0',
         'python-json-logger~=2.0.7',
         'pytz>=2021.3',
