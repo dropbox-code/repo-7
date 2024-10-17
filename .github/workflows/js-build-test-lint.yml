@@ -253,10 +253,10 @@ jobs:
         sudo sh -c ''echo 1 > /proc/sys/net/ipv4/ip_forward'''
     - continue-on-error: true
       name: Checkout
-      uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11
+      uses: actions/checkout@eef61447b9ff4aafe5dcd4e0bbf5d482be7e7871
     - continue-on-error: true
       name: Setup NodeJS ${{ matrix.node-version }}
-      uses: actions/setup-node@8f152de45cc393bb48ce5d89d36b731f54556e65
+      uses: actions/setup-node@0a44ba7841725637a19e28fa30b79a866c81b0a6
       with:
         node-version: ${{ matrix.node-version }}
     - continue-on-error: true
@@ -273,7 +273,7 @@ jobs:
       run: yarn lint
     - continue-on-error: true
       name: Harden Runner
-      uses: step-security/harden-runner@eb238b55efaa70779f274895e782ed17c84f2895
+      uses: step-security/harden-runner@91182cccc01eb5e619899d80e4e971d6181294a7
       with:
         egress-policy: audit
     - name: after

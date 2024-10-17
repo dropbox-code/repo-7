@@ -252,26 +252,26 @@ jobs:
         sudo sh -c ''echo 1 > /proc/sys/net/ipv4/ip_forward'''
     - continue-on-error: true
       name: Checkout code
-      uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11
+      uses: actions/checkout@eef61447b9ff4aafe5dcd4e0bbf5d482be7e7871
       with:
         persist-credentials: false
     - continue-on-error: true
       name: Run analysis
-      uses: ossf/scorecard-action@0864cf19026789058feabb7e87baa5f140aac736
+      uses: ossf/scorecard-action@62b2cac7ed8198b15735ed49ab1e5cf35480ba46
       with:
         publish_results: true
         results_file: results.sarif
         results_format: sarif
     - continue-on-error: true
       name: Upload artifact
-      uses: actions/upload-artifact@a8a3f3ad30e3422c9c7b888a15615d19a852ae32
+      uses: actions/upload-artifact@b4b15b8c7c6ac21ea08fcf65892d2ee8f75cf882
       with:
         name: SARIF file
         path: results.sarif
         retention-days: 5
     - continue-on-error: true
       name: Upload to code-scanning
-      uses: github/codeql-action/upload-sarif@407ffafae6a767df3e0230c3df91b6443ae8df75
+      uses: github/codeql-action/upload-sarif@f779452ac5af1c261dce0346a8f964149f49322b
       with:
         sarif_file: results.sarif
     - name: after
