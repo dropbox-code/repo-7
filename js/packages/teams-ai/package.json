@@ -22,16 +22,16 @@
     "main": "./lib/index.js",
     "types": "./lib/index.d.ts",
     "dependencies": {
-        "@azure/msal-node": "^2.6.0",
-        "axios": "^1.6.2",
-        "botbuilder": "^4.21.2",
-        "botbuilder-dialogs": "^4.21.2",
+        "@azure/msal-node": "^2.15.0",
+        "axios": "^1.7.7",
+        "botbuilder": "^4.23.1",
+        "botbuilder-dialogs": "^4.23.1",
         "gpt-3-encoder": "^1.1.4",
         "json-colorizer": "^2.2.2",
         "jsonschema": "1.4.1",
-        "openai": "^4.20.1",
+        "openai": "^4.68.0",
         "uuid": "^9.0.1",
-        "yaml": "^2.3.4"
+        "yaml": "^2.6.0"
     },
     "resolutions": {
         "follow-redirects": "^1.15.0"
