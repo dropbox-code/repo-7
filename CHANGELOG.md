@@ -2,6 +2,35 @@
 
 All notable changes to the LaunchDarkly Ruby SDK will be documented in this file. This project adheres to [Semantic Versioning](http://semver.org).
 
+## [8.9.0](https://github.com/dropbox-code/repo-7/compare/v8.8.0...8.9.0) (2024-10-17)
+
+
+### Features
+
+* Add hash access and equality support to LDContext ([#241](https://github.com/dropbox-code/repo-7/issues/241)) ([1ba6bde](https://github.com/dropbox-code/repo-7/commit/1ba6bde61fd8ed5a197fee74770a0aa5ab5222c8))
+* Add initial support for hooks ([#256](https://github.com/dropbox-code/repo-7/issues/256)) ([3cf16eb](https://github.com/dropbox-code/repo-7/commit/3cf16ebd559053cef601de288bddbc6430fe33ec))
+* Add option to enable compression of event payloads ([#291](https://github.com/dropbox-code/repo-7/issues/291)) ([978f6ea](https://github.com/dropbox-code/repo-7/commit/978f6eaf27e27f0e2484a7aa25ca70750d70f97f))
+* Add support for client-side prerequisite events ([#299](https://github.com/dropbox-code/repo-7/issues/299)) ([021451c](https://github.com/dropbox-code/repo-7/commit/021451cd3fc83fb3701e8a1d02f187e8baa18bb1))
+* adding option to omit anonymous contexts in identify and index events  ([#287](https://github.com/dropbox-code/repo-7/issues/287)) ([554f965](https://github.com/dropbox-code/repo-7/commit/554f9652f64fe52e2c809514490dd211c0699a27))
+* Define equality methods for LDContext and Reference ([#232](https://github.com/dropbox-code/repo-7/issues/232)) ([1b2ba7b](https://github.com/dropbox-code/repo-7/commit/1b2ba7bfd9ebfccfa7717cbd5c32665bc5f380db))
+* Enable gzip compression on polling requests ([#249](https://github.com/dropbox-code/repo-7/issues/249)) ([abffe47](https://github.com/dropbox-code/repo-7/commit/abffe476093a8203f262be337b0bc3a4ec6ba982))
+* Inline contexts for all evaluation events ([#245](https://github.com/dropbox-code/repo-7/issues/245)) ([bd30c3b](https://github.com/dropbox-code/repo-7/commit/bd30c3be7a832c14a9b9d2757b651169079a8c10))
+* Redact anonymous attributes within feature events ([#246](https://github.com/dropbox-code/repo-7/issues/246)) ([640ac39](https://github.com/dropbox-code/repo-7/commit/640ac393e6a9b7b0e9785b05917ec4301d4a3a90))
+* Support to_h and to_json methods for LDContext ([#284](https://github.com/dropbox-code/repo-7/issues/284)) ([d3c8d40](https://github.com/dropbox-code/repo-7/commit/d3c8d409b631f559239e48fb93eb5e4f9181254f))
+
+
+### Bug Fixes
+
+* Add additional payload filter key validation ([#295](https://github.com/dropbox-code/repo-7/issues/295)) ([75d6c6a](https://github.com/dropbox-code/repo-7/commit/75d6c6af595350f3a10e6215edb06647d5f0ea13))
+* Add observer as explicit dependency ([#272](https://github.com/dropbox-code/repo-7/issues/272)) ([f2226a6](https://github.com/dropbox-code/repo-7/commit/f2226a60295c06d0b154a8eaee6dd2fb42a5cd76)), closes [#271](https://github.com/dropbox-code/repo-7/issues/271)
+* Adjust migration variation and hook interaction ([#264](https://github.com/dropbox-code/repo-7/issues/264)) ([8067af6](https://github.com/dropbox-code/repo-7/commit/8067af635e7adc726656ecf75d4395a30cb1e359))
+* Calling stop in ldd mode no longer raises an exception ([#237](https://github.com/dropbox-code/repo-7/issues/237)) ([8149da1](https://github.com/dropbox-code/repo-7/commit/8149da1897d6da6bc9325c977df02f355173b135))
+* Ensure Rails.logger exists before using it ([#258](https://github.com/dropbox-code/repo-7/issues/258)) ([2f0f7ed](https://github.com/dropbox-code/repo-7/commit/2f0f7edcce831b486f1fb8f9a5ce368575ad1b43))
+* Increment flag & segment versions when reloading from file data source ([#285](https://github.com/dropbox-code/repo-7/issues/285)) ([7d5b051](https://github.com/dropbox-code/repo-7/commit/7d5b051ec1b1e8990a7fb3def5798f064acd5e04))
+* Log warning if client init timeout is considered high ([#278](https://github.com/dropbox-code/repo-7/issues/278)) ([61f4c7e](https://github.com/dropbox-code/repo-7/commit/61f4c7e589e9d0da94e4f289e9c601aa36028c95))
+* Remove invalid prereq `check_variation_range` check ([#261](https://github.com/dropbox-code/repo-7/issues/261)) ([#263](https://github.com/dropbox-code/repo-7/issues/263)) ([74ca206](https://github.com/dropbox-code/repo-7/commit/74ca2067fafead5325d824f8923ddb5ced83196d)), closes [#260](https://github.com/dropbox-code/repo-7/issues/260)
+* Remove outdated deprecation notice ([#275](https://github.com/dropbox-code/repo-7/issues/275)) ([dc46239](https://github.com/dropbox-code/repo-7/commit/dc4623937481382ed568e010a2f423a38447cede))
+
 ## [8.8.0](https://github.com/launchdarkly/ruby-server-sdk/compare/8.7.1...8.8.0) (2024-10-16)
 
 
